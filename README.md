@@ -3,7 +3,7 @@
 ### Objective
 
 ---
-Under construction
+Under construction 👷
 
 ### Installing and starting
 
@@ -139,8 +139,7 @@ This is a simple table of airport codes and corresponding cities. It comes from 
 ### Run the project
 
 ---
-under construction
-
+under construction 👷
 ### Links for Airflow
 
 ---
@@ -151,11 +150,3 @@ https://airflow.apache.org/macros.html
 https://medium.com/datareply/airflow-lesser-known-tips-tricks-and-best-practises-cf4d4a90f8f  
 https://medium.com/handy-tech/airflow-tips-tricks-and-pitfalls-9ba53fba14eb  
 https://www.astronomer.io/guides/dag-best-practices/
-
-```
-                          ____________       _____________
-                         ____    |__( )_________  __/__  /________      __
-                        ____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
-                        ___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
-                         _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
-```
