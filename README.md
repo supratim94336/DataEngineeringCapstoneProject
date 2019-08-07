@@ -1,9 +1,13 @@
 ## Data Engineering Capstone Project for Udacity
 
 ### Objective
+
+---
 Under construction
 
 ### Installing and starting
+
+---
 
 #### Installing Python Dependencies
 You need to install this python dependencies
@@ -87,7 +91,32 @@ create a connection and a variable.
 to your master_password for your cluster
 5. Click save
 
+#### Optional
+If you haven't setup your AWS Redshift Cluster yet 
+(or don't want to create one manually), then use the files
+ inside 'aws' folder 
+- To create cluster and IAM role: Run the below code in terminal from 'aws' folder to create your Redshift database and a
+    iam_role in aws having read access to Amazon S3 and permissions 
+    attached to the created cluster
+    ```bash
+    $ python aws_operate.py --action start
+    ```
+    copy the DWH_ENDPOINT for <cluster_endpoint_address> and DWH_ROLE_ARN 
+    for <iam_role> from the print statements 
+- To create Tables: Run the below code in terminal from project dir to create tables in your Redshift database
+    in aws 
+    ```bash
+    $ python create_table.py --host <cluster_endpoint_address>
+
+- To Stop: Run the below code in terminal from 'aws' directory to destroy your Redshift database and
+    detach iam_role from the cluster 
+    ```bash
+    $ python aws_operate.py --action stop
+    ```
+
 ### About the data
+
+---
 #### I94 Immigration Data: 
 This data comes from the US National Tourism and Trade Office. 
 [This](https://travel.trade.gov/research/reports/i94/historical/2016.html) 
@@ -108,9 +137,13 @@ This data comes from OpenSoft. You can read more about it [here](https://public.
 This is a simple table of airport codes and corresponding cities. It comes from [here](https://datahub.io/core/airport-codes#data).
 
 ### Run the project
+
+---
 under construction
 
-#### Links for Airflow
+### Links for Airflow
+
+---
 **Context Variables**  
 https://airflow.apache.org/macros.html
 
