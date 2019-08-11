@@ -1,0 +1,30 @@
+ColumnName      | ColumnDesc                                                                             | ColumnUse
+----------------|----------------------------------------------------------------------------------------|-----------------
+CICID           -                                                                                        -
+I94YR           - 4 digit year                                                                           -
+I94MON          - Numeric month                                                                          -
+I94CIT          - This format shows all the valid and invalid country codes for processing               -
+I94RES          - This format shows all the valid and invalid country codes for processing               -
+I94PORT         - This format shows all the valid and invalid port codes for processing                  -
+ARRDATE         - This is the Arrival Date in the USA                                                    -
+I94MODE         - This is the mode of transport (1 = 'Air';2 = 'Sea';3 = 'Land';9 = 'Not reported')      -
+I94ADDR         - The state codes; everything else goes into 'other'                                     -
+DEPDATE         - This is the Departure Date from the USA                                                -
+I94BIR          - Age of Respondent in Years                                                             -
+I94VISA         - Visa codes collapsed into three categories:(1 = Business;2 = Pleasure;3 = Student)*/   -
+COUNT           - Used for summary statistics                                                            -
+DTADFILE        - Character Date Field - Date added to I-94 Files                                        - CIC does not use
+VISAPOST        - Department of State where where Visa was issued                                        - CIC does not use
+OCCUP           - Occupation that will be performed in U.S.                                              - CIC does not use
+ENTDEPA         - Arrival Flag - admitted or paroled into the U.S.                                       - CIC does not use
+ENTDEPD         - Departure Flag - Departed, lost I-94 or is deceased                                    - CIC does not use
+ENTDEPU         - Update Flag - Either apprehended, overstayed, adjusted to perm residence               - CIC does not use
+MATFLAG         - Match flag - Match of arrival and departure records                                    -
+BIRYEAR         - 4 digit year of birth                                                                  -
+DTADDTO         - Character Date Field - Date to which admitted to U.S. (allowed to stay until)          - CIC does not use
+GENDER          - Non-immigrant sex                                                                      -
+INSNUM          - INS number                                                                             -
+AIRLINE         - Airline used to arrive in U.S.                                                         -
+ADMNUM          - Admission Number                                                                       -
+FLTNO           - Flight number of Airline used to arrive in U.S.                                        -
+VISATYPE        - Class of admission legally admitting the non-immigrant to temporarily stay in U.S.     -
