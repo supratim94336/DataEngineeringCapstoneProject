@@ -124,7 +124,7 @@ def transfer_files_to_s3(input_path, bucket_name, file_ext):
                                      + '/' + file)
 
 
-def create_dataframe_from_sas(filepath):
+def create_dframe_from_sas_spark(filepath):
     """
     This function reads all the sas formatted files and returns a final
     dataframe containing all the required and consolidated rows as a
@@ -216,5 +216,35 @@ def create_dataframe_from_sas(filepath):
         df_temp = spark.read.format(
             'com.github.saurfang.sas.spark').load(f).select(columns)
         df_all = df_all.union(df_temp)
+
+    return df_all.toPandas()
+
+
+def create_dframe_from_parquet_spark(filepath):
+    """
+    This function reads parquet files and returns a pandas dataframe
+
+    for heap space issues:-
+    .config("spark.executor.memory", "20g")\
+    .config("spark.driver.memory", "20g")\
+    .config("spark.memory.offHeap.enabled",True)\
+    .config("spark.memory.offHeap.size","12g")\
+
+    :param filepath:
+    :return:
+    """
+    spark = SparkSession.builder \
+        .config("spark.jars.packages",
+                "org.apache.hadoop:hadoop-aws:2.7.0") \
+        .appName("demo") \
+        .getOrCreate()
+
+    spark.sparkContext._jsc.hadoopConfiguration().set(
+        "fs.s3a.access.key", access_key)
+    spark.sparkContext._jsc.hadoopConfiguration().set(
+        "fs.s3a.secret.key", secret_key)
+
+    # filepath example: "s3a://supratim94336-bucket/parquet/"
+    df_all = spark.read.parquet(filepath)
 
     return df_all.toPandas()
