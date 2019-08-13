@@ -239,6 +239,7 @@ def create_dframe_from_parquet_spark(filepath):
         .appName("demo") \
         .getOrCreate()
 
+    # set aws credentials
     spark.sparkContext._jsc.hadoopConfiguration().set(
         "fs.s3a.access.key", access_key)
     spark.sparkContext._jsc.hadoopConfiguration().set(
