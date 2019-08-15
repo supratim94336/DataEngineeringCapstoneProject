@@ -191,5 +191,3 @@ class SASExtractor:
 
         return df_all.toPandas()
 
-
-#SASExtractor.extract_sas_labels("/Users/Supra/PycharmProjects/DataEngineeringCapstoneProject/data/I94_SAS_Labels_Descriptions.SAS", "/Users/Supra/PycharmProjects/DataEngineeringCapstoneProject/data/csv")
