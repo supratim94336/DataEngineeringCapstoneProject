@@ -1,8 +1,10 @@
 from airflow import DAG
-from airflow.operators import (StageToRedshiftOperator,
-                               ParquetToRedshiftOperator)
+from airflow.operators import StageToRedshiftOperator
 from helpers import SqlQueries
 from airflow.models import Variable
+from airflow.hooks.postgres_hook import PostgresHook
+from airflow.operators.python_operator import PythonOperator
+import logging
 
 
 def load_dimension_subdag(
@@ -115,16 +117,30 @@ def load_dimension_subdag(
         sql_stmt=SqlQueries.copy_csv_cmd,
         provide_context=True)
 
-    copy_immigration = ParquetToRedshiftOperator(
+    def parquet_to_redshift(table, s3_bucket, s3_key, iam_role,
+                            sql_stmt, redshift_conn_id, **kwargs):
+        redshift = PostgresHook(postgres_conn_id=redshift_conn_id)
+        logging.info("Copying data from S3 to Redshift")
+        s3_path = "s3://{}/{}".format(s3_bucket, s3_key)
+        formatted_sql = sql_stmt.format(
+            table,
+            s3_path,
+            iam_role
+        )
+        redshift.run(formatted_sql)
+
+    copy_immigration = PythonOperator(
         task_id='copy_immigration',
-        dag=dag,
-        redshift_conn_id="redshift",
-        table='immigration',
-        s3_bucket="udacity-data-lakes-supratim",
-        s3_key="parquet",
-        iam_role=Variable.get("iam_role"),
-        sql_stmt=SqlQueries.copy_parquet_cmd,
-        provide_context=True)
+        python_callable=parquet_to_redshift,  # changed
+        provide_context=True,
+        op_kwargs={'table': "immigration",
+                   's3_bucket': 'udacity-data-lakes-supratim',
+                   's3_key': 'parquet',
+                   'iam_role': Variable.get('iam_role'),
+                   'sql_stmt': SqlQueries.copy_parquet_cmd,
+                   'redshift_conn_id': 'redshift'},
+        dag=dag
+    )
 
     copy_ports
     copy_visa

@@ -10,8 +10,7 @@ class UdacityPlugin(AirflowPlugin):
         operators.SASToCSVOperator,
         operators.TransferToS3Operator,
         operators.SAS7ToParquet,
-        operators.StageToRedshiftOperator,
-        operators.ParquetToRedshiftOperator
+        operators.StageToRedshiftOperator
     ]
     helpers = [
         helpers.SqlQueries

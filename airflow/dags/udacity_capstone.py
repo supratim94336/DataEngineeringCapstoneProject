@@ -5,7 +5,7 @@ import os
 from airflow import DAG
 from airflow.operators.dummy_operator import DummyOperator
 from airflow.operators.postgres_operator import PostgresOperator
-from airflow.operators import (SASToCSVOperator, TransferToS3Operator, SAS7ToParquet, StageToRedshiftOperator, ParquetRedshiftOperator)
+from airflow.operators import (SASToCSVOperator, TransferToS3Operator, SAS7ToParquet, StageToRedshiftOperator)
 from airflow.operators.python_operator import PythonOperator
 from subdags.subdag_for_dimensions import load_dimension_subdag
 from airflow.models import Variable
@@ -104,18 +104,6 @@ load_dimension_subdag_task = SubDagOperator(
     ),
     task_id="load_dimensions",
     dag=dag
-)
-
-copy_immigration = ParquetRedshiftOperator(
-        task_id='copy_airports',
-        dag=dag,
-        redshift_conn_id="redshift",
-        table='immigration',
-        s3_bucket="udacity-data-lakes-supratim",
-        s3_key="parquet",
-        iam_role=Variable.get("iam_role"),
-        sql_stmt=SqlQueries.copy_parquet_cmd,
-        provide_context=True
 )
 
 # dummy for node end

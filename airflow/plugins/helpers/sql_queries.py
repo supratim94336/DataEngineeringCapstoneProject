@@ -41,7 +41,7 @@ class SqlQueries:
     ident VARCHAR,
     type VARCHAR,
     name VARCHAR,
-    elevation_ft FLOAT,
+    elevation_ft VARCHAR,
     continent VARCHAR,
     iso_country VARCHAR,
     iso_region VARCHAR,
@@ -49,9 +49,8 @@ class SqlQueries:
     gps_code VARCHAR,
     iata_code VARCHAR,
     local_code VARCHAR,
-    coordinates VARCHAR,
-    lat FLOAT,
-    long FLOAT
+    latitude VARCHAR,
+    longitude VARCHAR
     );
     """
 
@@ -128,6 +127,7 @@ class SqlQueries:
     COPY public.{} FROM '{}'
     CREDENTIALS 'aws_access_key_id={};aws_secret_access_key={}'
     IGNOREHEADER 1
+    DELIMITER '{}'
     COMPUPDATE OFF
     TRUNCATECOLUMNS
     CSV;
