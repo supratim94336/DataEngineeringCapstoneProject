@@ -5,133 +5,136 @@ class SqlQueries:
 
     immigration = """
         CREATE TABLE IF NOT EXISTS public.immigration (
-        cicid numeric(18,0),
-        i94yr numeric(18,0),
-        i94mon numeric(18,0),
-        i94cit numeric(18,0),
-        i94res numeric(18,0),
-        i94port varchar(256),
-        arrdate numeric(18,0),
-        i94mode numeric(18,0),
+        cicid FLOAT,
+        i94yr FLOAT,
+        i94mon FLOAT,
+        i94cit FLOAT,
+        i94res FLOAT,
+        i94port VARCHAR,
+        arrdate FLOAT,
+        i94mode FLOAT,
         i94addr varchar,
-        depdate numeric(18,0),
-        i94bir numeric(18,0),
-        i94visa numeric(18,0),
-        count numeric(18,0),
-        dtadfile varchar(256),
-        visapost varchar(256),
-        occup varchar(256),
-        entdepa varchar(256),
-        entdepd varchar(256),
-        entdepu varchar(256),
-        matflag varchar(256),
-        biryear numeric(18,0),
-        dtaddto varchar(256),
-        gender varchar(256),
-        insnum varchar(256),
-        airline varchar(256),
-        admnum numeric(18,0),
-        fltno varchar(256),
-        visatype varchar(256)
+        depdate FLOAT,
+        i94bir FLOAT,
+        i94visa FLOAT,
+        count FLOAT,
+        dtadfile VARCHAR,
+        visapost VARCHAR,
+        occup VARCHAR,
+        entdepa VARCHAR,
+        entdepd VARCHAR,
+        entdepu VARCHAR,
+        matflag VARCHAR,
+        biryear FLOAT,
+        dtaddto VARCHAR,
+        gender VARCHAR,
+        insnum VARCHAR,
+        airline VARCHAR,
+        admnum FLOAT,
+        fltno VARCHAR,
+        visatype VARCHAR
         );
     """
 
     airports = """
     CREATE TABLE IF NOT EXISTS public.airport_codes (
-    ident varchar(256),
-    type varchar(256),
-    name varchar(256),
-    elevation_ft numeric(18,0),
-    continent varchar(256),
-    iso_country varchar(256),
-    iso_region varchar(256),
-    municipality varchar(256),
-    gps_code varchar(256),
-    iata_code varchar(256),
-    local_code varchar(256),
-    coordinates varchar(256),
-    lat numeric(18,0),
-    long numeric(18,0)
+    ident VARCHAR,
+    type VARCHAR,
+    name VARCHAR,
+    elevation_ft FLOAT,
+    continent VARCHAR,
+    iso_country VARCHAR,
+    iso_region VARCHAR,
+    municipality VARCHAR,
+    gps_code VARCHAR,
+    iata_code VARCHAR,
+    local_code VARCHAR,
+    coordinates VARCHAR,
+    lat FLOAT,
+    long FLOAT
     );
     """
 
     i94ports = """
     CREATE TABLE IF NOT EXISTS public.i94ports (
-    port_code varchar(256),
-    port_of_entry varchar(256),
-    port_city varchar(256),
-    port_state_or_country varchar(256)
+    port_code VARCHAR,
+    port_of_entry VARCHAR,
+    port_city VARCHAR,
+    port_state_or_country VARCHAR
     );
     """
 
     i94visa = """
     CREATE TABLE IF NOT EXISTS public.i94visa (
-    visa_code int4,
-    visa_reason varchar(256)
+    visa_code INT,
+    visa_reason VARCHAR
     );
     """
 
     i94mode = """
     CREATE TABLE IF NOT EXISTS public.i94mode (
-    trans_code int4,
-    trans_name varchar(256)
+    trans_code INT,
+    trans_name VARCHAR
     );
     """
 
     i94addr = """
     CREATE TABLE IF NOT EXISTS public.i94addr (
-    state_code varchar(256),
-    state_name varchar(256)
+    state_code VARCHAR,
+    state_name VARCHAR
     );
     """
 
     i94res = """
     CREATE TABLE IF NOT EXISTS public.i94res (
-    country_code int4,
-    country_name varchar(256)
+    country_code INT,
+    country_name VARCHAR
     );
     """
 
     us_cities_demographics = """
     CREATE TABLE IF NOT EXISTS public.us_cities_demographics (
-    city varchar(256),
-    state varchar(256),
-    median_age numeric(18,0),
-    male_population numeric(18,0),
-    female_population numeric(18,0),
-    total_population numeric(18,0),
-    number_of_veterans numeric(18,0),
-    foreign_born numeric(18,0),
-    average_household_size numeric(18,0),
-    state_code varchar(256),
-    race varchar(256),
-    count int4
+    city VARCHAR,
+    state VARCHAR,
+    median_age FLOAT,
+    male_population FLOAT,
+    female_population FLOAT,
+    total_population FLOAT,
+    number_of_veterans FLOAT,
+    foreign_born FLOAT,
+    average_household_size FLOAT,
+    state_code VARCHAR,
+    race VARCHAR,
+    count INT
     );
     """
 
-    drop_table = """
-    DROP TABLE IF EXISTS public.{};
+    drop_tables = """
+    DROP TABLE IF EXISTS public.immigration;
+    DROP TABLE IF EXISTS public.airport_codes;
+    DROP TABLE IF EXISTS public.i94port;
+    DROP TABLE IF EXISTS public.i94visa;
+    DROP TABLE IF EXISTS public.i94mode;
+    DROP TABLE IF EXISTS public.i94addr;
+    DROP TABLE IF EXISTS public.i94res;
+    DROP TABLE IF EXISTS public.us_cities_demographics;
     """
 
     create_tables = immigration + airports + i94ports + i94visa + i94mode + i94addr + i94res + us_cities_demographics
     tables = ["immigration", "airport_codes", "i94port", "i94visa",
-              "i94mode", "i94addr", "i94res", "us-cities-demographics"]
-    drop_all = []
-    for table in tables:
-        drop_all.append(drop_table.format(table))
-    drop_tables = drop_all
+              "i94mode", "i94addr", "i94res", "us_cities_demographics"]
 
     copy_csv_cmd = """
-                        COPY {}.{} FROM '{}'
-                        CREDENTIALS 'aws_access_key_id={};aws_secret_access_key={}'
-                        IGNOREHEADER 1
-                        COMPUPDATE OFF
-                        TRUNCATECOLUMNS
-                        CSV;
-                        """
+    COPY public.{} FROM '{}'
+    CREDENTIALS 'aws_access_key_id={};aws_secret_access_key={}'
+    IGNOREHEADER 1
+    COMPUPDATE OFF
+    TRUNCATECOLUMNS
+    CSV;
+    """
 
     copy_parquet_cmd = """
-                        COPY {}.{} FROM '{}'
-                        CREDENTIALS 'aws_access_key_id={};aws_secret_access_key={}'
+                        COPY public.{} FROM '{}'
+                        IAM_ROLE '{}'
                         FORMAT AS PARQUET;
                        """

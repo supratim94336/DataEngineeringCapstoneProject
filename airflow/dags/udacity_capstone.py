@@ -1,12 +1,24 @@
 # generic
 from datetime import datetime, timedelta
+import os
 # airflow
 from airflow import DAG
 from airflow.operators.dummy_operator import DummyOperator
 from airflow.operators.postgres_operator import PostgresOperator
-from airflow.operators import (SASToCSVOperator, TransferToS3Operator, SAS7ToParquet)
+from airflow.operators import (SASToCSVOperator, TransferToS3Operator, SAS7ToParquet, StageToRedshiftOperator, ParquetRedshiftOperator)
+from airflow.operators.python_operator import PythonOperator
+from subdags.subdag_for_dimensions import load_dimension_subdag
 from airflow.models import Variable
 from helpers import SqlQueries
+from airflow.operators.subdag_operator import SubDagOperator
+# temp
+from pyspark.sql import SparkSession
+from os import listdir
+from os.path import isfile, join
+from pyspark.sql.types import *
+import logging
+import shutil
+import os
 
 
 default_args = {
@@ -46,7 +58,7 @@ transfer_to_s3_csv = TransferToS3Operator(
     dag=dag,
     aws_credentials_id="aws_default",
     input_path=Variable.get("temp_output"),
-    bucket_name="supratim94336-bucket",
+    bucket_name="udacity-data-lakes-supratim",
     file_ext="csv",
     provide_context=True
 )
@@ -64,9 +76,16 @@ transfer_to_s3_parquet = TransferToS3Operator(
     dag=dag,
     aws_credentials_id="aws_default",
     input_path=Variable.get("spark_path"),
-    bucket_name="supratim94336-bucket",
+    bucket_name="udacity-data-lakes-supratim",
     file_ext="parquet",
     provide_context=True
+)
+
+task_drop_table = PostgresOperator(
+    task_id="drop_table",
+    postgres_conn_id="redshift",
+    sql=SqlQueries.drop_tables,
+    dag=dag
 )
 
 task_create_table = PostgresOperator(
@@ -76,10 +95,33 @@ task_create_table = PostgresOperator(
     dag=dag
 )
 
+load_dimension_subdag_task = SubDagOperator(
+    subdag=load_dimension_subdag(
+        parent_dag_name="udacity_capstone",
+        task_id="load_dimensions",
+        redshift_conn_id="redshift",
+        start_date=datetime(2018, 1, 1)
+    ),
+    task_id="load_dimensions",
+    dag=dag
+)
+
+copy_immigration = ParquetRedshiftOperator(
+        task_id='copy_airports',
+        dag=dag,
+        redshift_conn_id="redshift",
+        table='immigration',
+        s3_bucket="udacity-data-lakes-supratim",
+        s3_key="parquet",
+        iam_role=Variable.get("iam_role"),
+        sql_stmt=SqlQueries.copy_parquet_cmd,
+        provide_context=True
+)
+
 # dummy for node end
 end_operator = DummyOperator(task_id='Stop_execution', dag=dag)
 
 # order
-start_operator >> convert_sas_to_csv >> transfer_to_s3_csv >> task_create_table
-start_operator >> sas7bdat_to_parquet >> transfer_to_s3_parquet >> task_create_table
-task_create_table >> end_operator
+start_operator >> convert_sas_to_csv >> transfer_to_s3_csv >> task_drop_table
+start_operator >> sas7bdat_to_parquet >> transfer_to_s3_parquet >> task_drop_table
+task_drop_table >> task_create_table >> load_dimension_subdag_task >> end_operator
