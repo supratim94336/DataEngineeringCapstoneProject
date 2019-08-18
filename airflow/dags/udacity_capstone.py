@@ -1,20 +1,12 @@
 # generic
 from datetime import datetime, timedelta
-import os
 # airflow
 from airflow import DAG
 from airflow.operators.dummy_operator import DummyOperator
+from airflow.operators.postgres_operator import PostgresOperator
 from airflow.operators import (SASToCSVOperator, TransferToS3Operator, SAS7ToParquet)
-from airflow.operators.python_operator import PythonOperator
 from airflow.models import Variable
-# temp
-from pyspark.sql import SparkSession
-from os import listdir
-from os.path import isfile, join
-from pyspark.sql.types import *
-import logging
-import shutil
-import os
+from helpers import SqlQueries
 
 
 default_args = {
@@ -59,7 +51,7 @@ transfer_to_s3_csv = TransferToS3Operator(
     provide_context=True
 )
 
-sas7bdat_to_parquet = SAS7ToParquet(
+sas7bdat_to_parquet = SAS7ToParquet (
     task_id='sas7bdat_to_parquet',
     dag=dag,
     input_path=Variable.get("temp_input"),
@@ -77,9 +69,17 @@ transfer_to_s3_parquet = TransferToS3Operator(
     provide_context=True
 )
 
+task_create_table = PostgresOperator(
+    task_id="create_table",
+    postgres_conn_id="redshift",
+    sql=SqlQueries.create_tables,
+    dag=dag
+)
+
 # dummy for node end
 end_operator = DummyOperator(task_id='Stop_execution', dag=dag)
 
 # order
-start_operator >> convert_sas_to_csv >> transfer_to_s3_csv >> sas7bdat_to_parquet >> transfer_to_s3_parquet >> end_operator
-
+start_operator >> convert_sas_to_csv >> transfer_to_s3_csv >> task_create_table
+start_operator >> sas7bdat_to_parquet >> transfer_to_s3_parquet >> task_create_table
+task_create_table >> end_operator
