@@ -1,0 +1,661 @@
+port_code,port_name,port_city,port_state
+ALC,"Alcan, Ak",Alcan, AK
+ANC,"Anchorage, Ak",Anchorage, AK
+BAR,"Baker Aaf - Baker Island, Ak",Baker Aaf - Baker Island, AK
+DAC,"Daltons Cache, Ak",Daltons Cache, AK
+PIZ,"Dew Station Pt Lay Dew, Ak",Dew Station Pt Lay Dew, AK
+DTH,"Dutch Harbor, Ak",Dutch Harbor, AK
+EGL,"Eagle, Ak",Eagle, AK
+FRB,"Fairbanks, Ak",Fairbanks, AK
+HOM,"Homer, Ak",Homer, AK
+HYD,"Hyder, Ak",Hyder, AK
+JUN,"Juneau, Ak",Juneau, AK
+5KE,"Ketchikan, Ak",Ketchikan, AK
+KET,"Ketchikan, Ak",Ketchikan, AK
+MOS,"Moses Point Intermediate, Ak",Moses Point Intermediate, AK
+NIK,"Nikiski, Ak",Nikiski, AK
+NOM,"Nom, Ak",Nom, AK
+PKC,"Poker Creek, Ak",Poker Creek, AK
+ORI,"Port Lions Spb, Ak",Port Lions Spb, AK
+SKA,"Skagway, Ak",Skagway, AK
+SNP,"St. Paul Island, Ak",St. Paul Island, AK
+TKI,"Tokeen, Ak",Tokeen, AK
+WRA,"Wrangell, Ak",Wrangell, AK
+HSV,"Madison County - Huntsville, Al",Madison County - Huntsville, AL
+MOB,"Mobile, Al",Mobile, AL
+LIA,"Little Rock, Ar (Bps)",Little Rock, AR (BPS)
+ROG,"Rogers Arpt, Ar",Rogers Arpt, AR
+DOU,"Douglas, Az",Douglas, AZ
+LUK,"Lukeville, Az",Lukeville, AZ
+MAP,Mariposa Az,Mariposa Az,
+NAC,"Naco, Az",Naco, AZ
+NOG,"Nogales, Az",Nogales, AZ
+PHO,"Phoenix, Az",Phoenix, AZ
+POR,"Portal, Az",Portal, AZ
+SLU,"San Luis, Az",San Luis, AZ
+SAS,"Sasabe, Az",Sasabe, AZ
+TUC,"Tucson, Az",Tucson, AZ
+YUI,"Yuma, Az",Yuma, AZ
+AND,"Andrade, Ca",Andrade, CA
+BUR,"Burbank, Ca",Burbank, CA
+CAL,"Calexico, Ca",Calexico, CA
+CAO,"Campo, Ca",Campo, CA
+FRE,"Fresno, Ca",Fresno, CA
+ICP,"Imperial County, Ca",Imperial County, CA
+LNB,"Long Beach, Ca",Long Beach, CA
+LOS,"Los Angeles, Ca",Los Angeles, CA
+BFL,"Meadows Field - Bakersfield, Ca",Meadows Field - Bakersfield, CA
+OAK,"Oakland, Ca",Oakland, CA
+ONT,"Ontario, Ca",Ontario, CA
+OTM,"Otay Mesa, Ca",Otay Mesa, CA
+BLT,"Pacific, Hwy. Station, Ca","Pacific, Hwy. Station", CA
+PSP,"Palm Springs, Ca",Palm Springs, CA
+SAC,"Sacramento, Ca",Sacramento, CA
+SLS,"Salinas, Ca (Bps)",Salinas, CA (BPS)
+SDP,"San Diego, Ca",San Diego, CA
+SFR,"San Francisco, Ca",San Francisco, CA
+SNJ,"San Jose, Ca",San Jose, CA
+SLO,"San Luis Obispo, Ca",San Luis Obispo, CA
+SLI,"San Luis Obispo, Ca (Bps)",San Luis Obispo, CA (BPS)
+SPC,"San Pedro, Ca",San Pedro, CA
+SYS,"San Ysidro, Ca",San Ysidro, CA
+SAA,"Santa Ana, Ca",Santa Ana, CA
+STO,"Stockton, Ca (Bps)",Stockton, CA (BPS)
+TEC,"Tecate, Ca",Tecate, CA
+TRV,"Travis-Afb, Ca",Travis-Afb, CA
+APA,"Arapahoe County, Co",Arapahoe County, CO
+ASE,"Aspen, Co #Arpt",Aspen, CO #ARPT
+COS,"Colorado Springs, Co",Colorado Springs, CO
+DEN,"Denver, Co",Denver, CO
+DRO,"La Plata - Durango, Co",La Plata - Durango, CO
+BDL,"Bradley International, Ct",Bradley International, CT
+BGC,"Bridgeport, Ct",Bridgeport, CT
+GRT,"Groton, Ct",Groton, CT
+HAR,"Hartford, Ct",Hartford, CT
+NWH,"New Haven, Ct",New Haven, CT
+NWL,"New London, Ct",New London, CT
+TST,"Newington Data Center Test, Ct",Newington Data Center Test, CT
+WAS,Washington Dc,Washington Dc,
+DOV,"Dover Afb, De",Dover Afb, DE
+DVD,"Dover-Afb, De",Dover-Afb, DE
+WLL,"Wilmington, De",Wilmington, DE
+BOC,"Bocagrande, Fl",Bocagrande, FL
+SRQ,"Bradenton - Sarasota, Fl",Bradenton - Sarasota, FL
+CAN,"Cape Canaveral, Fl",Cape Canaveral, FL
+DAB,"Daytona Beach International, Fl",Daytona Beach International, FL
+FRN,"Fernandina, Fl",Fernandina, FL
+FTL,"Fort Lauderdale, Fl",Fort Lauderdale, FL
+FMY,"Fort Myers, Fl",Fort Myers, FL
+FPF,"Fort Pierce, Fl",Fort Pierce, FL
+HUR,"Hurlburt Field, Fl",Hurlburt Field, FL
+GNV,"J R Alison Muni - Gainesville, Fl",J R Alison Muni - Gainesville, FL
+JAC,"Jacksonville, Fl",Jacksonville, FL
+KEY,"Key West, Fl",Key West, FL
+LEE,"Leesburg Municipal Airport, Fl",Leesburg Municipal Airport, FL
+MLB,"Melbourne, Fl",Melbourne, FL
+MIA,"Miami, Fl",Miami, FL
+APF,"Naples, Fl #Arpt",Naples, FL #ARPT
+OPF,"Opa Locka, Fl",Opa Locka, FL
+ORL,"Orlando, Fl",Orlando, FL
+PAN,"Panama City, Fl",Panama City, FL
+PEN,"Pensacola, Fl",Pensacola, FL
+PCF,"Port Canaveral, Fl",Port Canaveral, FL
+PEV,"Port Everglades, Fl",Port Everglades, FL
+PSJ,"Port St Joe, Fl",Port St Joe, FL
+SFB,"Sanford, Fl",Sanford, FL
+SGJ,"St Augustine Arpt, Fl",St Augustine Arpt, FL
+SAU,"St Augustine, Fl",St Augustine, FL
+FPR,"St Lucie County, Fl",St Lucie County, FL
+SPE,"St Petersburg, Fl",St Petersburg, FL
+TAM,"Tampa, Fl",Tampa, FL
+WPB,"West Palm Beach, Fl",West Palm Beach, FL
+ATL,"Atlanta, Ga",Atlanta, GA
+BRU,"Brunswick, Ga",Brunswick, GA
+AGS,"Bush Field - Augusta, Ga",Bush Field - Augusta, GA
+SAV,"Savannah, Ga",Savannah, GA
+AGA,"Agana, Gu",Agana, GU
+HHW,"Honolulu, Hi",Honolulu, HI
+OGG,"Kahului - Maui, Hi",Kahului - Maui, HI
+KOA,"Keahole-Kona, Hi",Keahole-Kona, HI
+LIH,"Lihue, Hi",Lihue, HI
+CID,"Cedar Rapids/Iowa City, Ia",Cedar Rapids/Iowa City, IA
+DSM,"Des Moines, Ia",Des Moines, IA
+BOI,"Air Term. (Gowen Fld) Boise, Id",Air Term. (Gowen Fld) Boise, ID
+EPI,"Eastport, Id",Eastport, ID
+IDA,"Fanning Field - Idaho Falls, Id",Fanning Field - Idaho Falls, ID
+PTL,"Porthill, Id",Porthill, ID
+SPI,"Capital - Springfield, Il",Capital - Springfield, IL
+CHI,"Chicago, Il",Chicago, IL
+DPA,"Dupage County, Il",Dupage County, IL
+PIA,"Greater Peoria, Il",Greater Peoria, IL
+RFD,"Greater Rockford, Il",Greater Rockford, IL
+UGN,"Memorial - Waukegan, Il",Memorial - Waukegan, IL
+GAR,"Gary, In",Gary, IN
+HMM,"Hammond, In",Hammond, IN
+INP,"Indianapolis, In",Indianapolis, IN
+MRL,"Merrillville, In",Merrillville, IN
+SBN,"South Bend, In",South Bend, IN
+ICT,"Mid-Continent - Witchita, Ks",Mid-Continent - Witchita, KS
+LEX,"Blue Grass - Lexington, Ky",Blue Grass - Lexington, KY
+LOU,"Louisville, Ky",Louisville, KY
+BTN,"Baton Rouge, La",Baton Rouge, LA
+LKC,"Lake Charles, La",Lake Charles, LA
+LAK,"Lake Charles, La (Bps)",Lake Charles, LA (BPS)
+MLU,"Monroe, La",Monroe, LA
+MGC,"Morgan City, La",Morgan City, LA
+NOL,"New Orleans, La",New Orleans, LA
+BOS,"Boston, Ma",Boston, MA
+GLO,"Gloucester, Ma",Gloucester, MA
+BED,"Hanscom Field - Bedford, Ma",Hanscom Field - Bedford, MA
+LYN,"Lynden, Wa",Lynden, WA
+ADW,"Andrews Afb, Md",Andrews Afb, MD
+BAL,"Baltimore, Md",Baltimore, MD
+MKG,"Muskegon, Md",Muskegon, MD
+PAX,"Patuxent River, Md",Patuxent River, MD
+BGM,"Bangor, Me",Bangor, ME
+BOO,"Boothbay Harbor, Me",Boothbay Harbor, ME
+BWM,"Bridgewater, Me",Bridgewater, ME
+BCK,"Buckport, Me",Buckport, ME
+CLS,"Calais, Me",Calais, ME
+CRB,"Caribou, Me",Caribou, ME
+COB,"Coburn Gore, Me",Coburn Gore, ME
+EST,"Eastcourt, Me",Eastcourt, ME
+EPT,"Eastport Municipal, Me",Eastport Municipal, ME
+EPM,"Eastport, Me",Eastport, ME
+FOR,"Forest City, Me",Forest City, ME
+FTF,"Fort Fairfield, Me",Fort Fairfield, ME
+FTK,"Fort Kent, Me",Fort Kent, ME
+HML,"Hamiin, Me",Hamiin, ME
+HTM,"Houlton, Me",Houlton, ME
+JKM,"Jackman, Me",Jackman, ME
+KAL,"Kalispel, Mt",Kalispel, MT
+LIM,"Limestone, Me",Limestone, ME
+LUB,"Lubec, Me",Lubec, ME
+MAD,"Madawaska, Me",Madawaska, ME
+POM,"Portland, Me",Portland, ME
+RGM,"Rangeley, Me (Bps)",Rangeley, ME (BPS)
+SBR,"South Brewer, Me",South Brewer, ME
+SRL,"St Aurelie, Me",St Aurelie, ME
+SPA,"St Pampile, Me",St Pampile, ME
+VNB,"Van Buren, Me",Van Buren, ME
+VCB,"Vanceboro, Me",Vanceboro, ME
+AGN,"Algonac, Mi",Algonac, MI
+ALP,"Alpena, Mi",Alpena, MI
+BCY,"Bay City, Mi",Bay City, MI
+DET,"Detroit, Mi",Detroit, MI
+GRP,"Grand Rapids, Mi",Grand Rapids, MI
+GRO,"Grosse Isle, Mi",Grosse Isle, MI
+ISL,"Isle Royale, Mi",Isle Royale, MI
+MRC,"Marine City, Mi",Marine City, MI
+MRY,"Marysville, Mi",Marysville, MI
+PTK,"Oakland County - Pontiac, Mi",Oakland County - Pontiac, MI
+PHU,"Port Huron, Mi",Port Huron, MI
+RBT,"Roberts Landing, Mi",Roberts Landing, MI
+SAG,"Saginaw, Mi",Saginaw, MI
+SSM,"Sault Ste. Marie, Mi",Sault Ste. Marie, MI
+SCL,"St Clair, Mi",St Clair, MI
+YIP,"Willow Run - Ypsilanti, Mi",Willow Run - Ypsilanti, MI
+BAU,"Baudette, Mn",Baudette, MN
+CAR,"Caribou Municipal Airport, Mn",Caribou Municipal Airport, MN
+GTF,"Collapsed Into Int, Mn",Collapsed Into Int, MN
+INL,"Collapsed Into Int, Mn",Collapsed Into Int, MN
+CRA,"Crane Lake, Mn",Crane Lake, MN
+MIC,"Crystal Municipal Airport, Mn",Crystal Municipal Airport, MN
+DUL,"Duluth, Mn",Duluth, MN
+ELY,"Ely, Mn",Ely, MN
+GPM,"Grand Portage, Mn",Grand Portage, MN
+SVC,"Grant County - Silver City, Mn",Grant County - Silver City, MN
+INT,"Intl Falls, Mn",Intl Falls, MN
+LAN,"Lancaster, Mn",Lancaster, MN
+MSP,"Minn./St Paul, Mn",Minn./St Paul, MN
+LIN,"Northern Svc Center, Mn",Northern Svc Center, MN
+NOY,"Noyes, Mn",Noyes, MN
+PIN,"Pine Creek, Mn",Pine Creek, MN
+48Y,"Pinecreek Border Arpt, Mn",Pinecreek Border Arpt, MN
+RAN,"Rainer, Mn",Rainer, MN
+RST,"Rochester, Mn",Rochester, MN
+ROS,"Roseau, Mn",Roseau, MN
+SPM,"St Paul, Mn",St Paul, MN
+WSB,"Warroad Intl, Spb, Mn","Warroad Intl, Spb", MN
+WAR,"Warroad, Mn",Warroad, MN
+KAN,"Kansas City, Mo",Kansas City, MO
+SGF,"Springfield-Branson, Mo",Springfield-Branson, MO
+STL,"St Louis, Mo",St Louis, MO
+WHI,"Whitetail, Mt",Whitetail, MT
+WHM,"Wild Horse, Mt",Wild Horse, MT
+GPT,"Biloxi Regional, Ms",Biloxi Regional, MS
+GTR,"Golden Triangle Lowndes Cnty, Ms",Golden Triangle Lowndes Cnty, MS
+GUL,"Gulfport, Ms",Gulfport, MS
+PAS,"Pascagoula, Ms",Pascagoula, MS
+JAN,"Thompson Field - Jackson, Ms",Thompson Field - Jackson, MS
+BIL,"Billings, Mt",Billings, MT
+BTM,"Butte, Mt",Butte, MT
+CHF,"Chief Mt, Mt",Chief Mt, MT
+CTB,"Cut Bank Municipal, Mt",Cut Bank Municipal, MT
+CUT,"Cut Bank, Mt",Cut Bank, MT
+DLB,"Del Bonita, Mt",Del Bonita, MT
+EUR,"Eureka, Mt (Bps)",Eureka, MT (BPS)
+BZN,"Gallatin Field - Bozeman, Mt",Gallatin Field - Bozeman, MT
+FCA,"Glacier National Park, Mt",Glacier National Park, MT
+GGW,"Glasgow, Mt",Glasgow, MT
+GRE,"Great Falls, Mt",Great Falls, MT
+HVR,"Havre, Mt",Havre, MT
+HEL,"Helena, Mt",Helena, MT
+LWT,"Lewiston, Mt",Lewiston, MT
+MGM,"Morgan, Mt",Morgan, MT
+OPH,"Opheim, Mt",Opheim, MT
+PIE,"Piegan, Mt",Piegan, MT
+RAY,"Raymond, Mt",Raymond, MT
+ROO,"Roosville, Mt",Roosville, MT
+SCO,"Scobey, Mt",Scobey, MT
+SWE,"Sweetgtass, Mt",Sweetgtass, MT
+TRL,"Trial Creek, Mt",Trial Creek, MT
+TUR,"Turner, Mt",Turner, MT
+WCM,"Willow Creek, Mt",Willow Creek, MT
+CLT,"Charlotte, Nc",Charlotte, NC
+FAY,"Fayetteville, Nc",Fayetteville, NC
+MRH,"Morehead City, Nc",Morehead City, NC
+FOP,"Morris Fields Aaf, Nc",Morris Fields Aaf, NC
+GSO,"Piedmont Triad Intl Airport, Nc",Piedmont Triad Intl Airport, NC
+RDU,"Raleigh/Durham, Nc",Raleigh/Durham, NC
+SSC,"Shaw Afb - Sumter, Nc",Shaw Afb - Sumter, NC
+WIL,"Wilmington, Nc",Wilmington, NC
+AMB,"Ambrose, Nd",Ambrose, ND
+ANT,"Antler, Nd",Antler, ND
+CRY,"Carbury, Nd",Carbury, ND
+DNS,"Dunseith, Nd",Dunseith, ND
+FAR,"Fargo, Nd",Fargo, ND
+FRT,"Fortuna, Nd",Fortuna, ND
+GRF,"Grand Forks, Nd",Grand Forks, ND
+HNN,"Hannah, Nd",Hannah, ND
+HNS,"Hansboro, Nd",Hansboro, ND
+MAI,"Maida, Nd",Maida, ND
+MND,"Minot, Nd",Minot, ND
+NEC,"Neche, Nd",Neche, ND
+NOO,"Noonan, Nd",Noonan, ND
+NRG,"Northgate, Nd",Northgate, ND
+PEM,"Pembina, Nd",Pembina, ND
+SAR,"Sarles, Nd",Sarles, ND
+SHR,"Sherwood, Nd",Sherwood, ND
+SJO,"St John, Nd",St John, ND
+WAL,"Walhalla, Nd",Walhalla, ND
+WHO,"Westhope, Nd",Westhope, ND
+WND,"Williston, Nd",Williston, ND
+OMA,"Omaha, Ne",Omaha, NE
+LEB,"Lebanon, Nh",Lebanon, NH
+MHT,"Manchester, Nh",Manchester, NH
+PNH,"Pittsburg, Nh",Pittsburg, NH
+PSM,"Portsmouth, Nh",Portsmouth, NH
+BYO,"Bayonne, Nj",Bayonne, NJ
+CNJ,"Camden, Nj",Camden, NJ
+HOB,"Hoboken, Nj",Hoboken, NJ
+JER,"Jersey City, Nj",Jersey City, NJ
+WRI,"Mc Guire Afb - Wrightsown, Nj",Mc Guire Afb - Wrightsown, NJ
+MMU,"Morristown, Nj",Morristown, NJ
+NEW,"Newark/Teterboro, Nj",Newark/Teterboro, NJ
+PER,"Perth Amboy, Nj",Perth Amboy, NJ
+ACY,"Pomona Field - Atlantic City, Nj",Pomona Field - Atlantic City, NJ
+ALA,"Alamagordo, Nm (Bps)",Alamagordo, NM (BPS)
+ABQ,"Albuquerque, Nm",Albuquerque, NM
+ANP,"Antelope Wells, Nm",Antelope Wells, NM
+CRL,"Carlsbad, Nm",Carlsbad, NM
+COL,"Columbus, Nm",Columbus, NM
+CDD,"Crane Lake - St. Louis Cnty, Nm",Crane Lake - St. Louis Cnty, NM
+DNM,"Deming, Nm (Bps)",Deming, NM (BPS)
+LAS,"Las Cruces, Nm",Las Cruces, NM
+LOB,"Lordsburg, Nm (Bps)",Lordsburg, NM (BPS)
+RUI,"Ruidoso, Nm",Ruidoso, NM
+STR,"Santa Teresa, Nm",Santa Teresa, NM
+RNO,"Cannon Intl - Reno/Tahoe, Nv",Cannon Intl - Reno/Tahoe, NV
+FLX,"Fallon Municipal Airport, Nv",Fallon Municipal Airport, NV
+LVG,"Las Vegas, Nv",Las Vegas, NV
+REN,"Reno, Nv",Reno, NV
+ALB,"Albany, Ny",Albany, NY
+AXB,"Alexandria Bay, Ny",Alexandria Bay, NY
+BUF,"Buffalo, Ny",Buffalo, NY
+CNH,"Cannon Corners, Ny",Cannon Corners, NY
+CAP,"Cape Vincent, Ny",Cape Vincent, NY
+CHM,"Champlain, Ny",Champlain, NY
+CHT,"Chateaugay, Ny",Chateaugay, NY
+CLA,"Clayton, Ny",Clayton, NY
+FTC,"Fort Covington, Ny",Fort Covington, NY
+LAG,"La Guardia, Ny",La Guardia, NY
+LEW,"Lewiston, Ny",Lewiston, NY
+MAS,"Massena, Ny",Massena, NY
+MAG,"Mcguire Afb, Ny",Mcguire Afb, NY
+MOO,"Moores, Ny",Moores, NY
+MRR,"Morristown, Ny",Morristown, NY
+NYC,"New York, Ny",New York, NY
+NIA,"Niagara Falls, Ny",Niagara Falls, NY
+OGD,"Ogdensburg, Ny",Ogdensburg, NY
+OSW,"Oswego, Ny",Oswego, NY
+ELM,"Regional Arpt - Horsehead, Ny",Regional Arpt - Horsehead, NY
+ROC,"Rochester, Ny",Rochester, NY
+ROU,"Rouses Point, Ny",Rouses Point, NY
+SWF,"Stewart - Orange Cnty, Ny",Stewart - Orange Cnty, NY
+SYR,"Syracuse, Ny",Syracuse, NY
+THO,"Thousand Island Bridge, Ny",Thousand Island Bridge, NY
+TRO,"Trout River, Ny",Trout River, NY
+WAT,"Watertown, Ny",Watertown, NY
+HPN,"Westchester - White Plains, Ny",Westchester - White Plains, NY
+WRB,"Whirlpool Bridge, Ny",Whirlpool Bridge, NY
+YOU,"Youngstown, Ny",Youngstown, NY
+AKR,"Akron, Oh",Akron, OH
+ATB,"Ashtabula, Oh",Ashtabula, OH
+CIN,"Cincinnati, Oh",Cincinnati, OH
+CLE,"Cleveland, Oh",Cleveland, OH
+CLM,"Columbus, Oh",Columbus, OH
+LOR,"Lorain, Oh",Lorain, OH
+MBO,"Marble Heads, Oh",Marble Heads, OH
+SDY,"Sandusky, Oh",Sandusky, OH
+TOL,"Toledo, Oh",Toledo, OH
+OKC,"Oklahoma City, Ok",Oklahoma City, OK
+TUL,"Tulsa, Ok",Tulsa, OK
+AST,"Astoria, Or",Astoria, OR
+COO,"Coos Bay, Or",Coos Bay, OR
+HIO,"Hillsboro, Or",Hillsboro, OR
+MED,"Medford, Or",Medford, OR
+NPT,"Newport, Or",Newport, OR
+POO,"Portland, Or",Portland, OR
+PUT,"Put-In-Bay, Oh",Put-In-Bay, OH
+RDM,"Roberts Fields - Redmond, Or",Roberts Fields - Redmond, OR
+ERI,"Erie, Pa",Erie, PA
+MDT,"Harrisburg, Pa",Harrisburg, PA
+HSB,"Harrisonburg, Pa",Harrisonburg, PA
+PHI,"Philadelphia, Pa",Philadelphia, PA
+PIT,"Pittsburg, Pa",Pittsburg, PA
+AGU,"Aguadilla, Pr",Aguadilla, PR
+BQN,"Borinquen - Aguadillo, Pr",Borinquen - Aguadillo, PR
+JCP,"Culebra - Benjamin Rivera, Pr",Culebra - Benjamin Rivera, PR
+ENS,"Ensenada, Pr",Ensenada, PR
+FAJ,"Fajardo, Pr",Fajardo, PR
+HUM,"Humacao, Pr",Humacao, PR
+JOB,"Jobos, Pr",Jobos, PR
+MAY,"Mayaguez, Pr",Mayaguez, PR
+PON,"Ponce, Pr",Ponce, PR
+PSE,"Ponce-Mercedita, Pr",Ponce-Mercedita, PR
+SAJ,"San Juan, Pr",San Juan, PR
+VQS,"Vieques-Arpt, Pr",Vieques-Arpt, PR
+PRO,"Providence, Ri",Providence, RI
+PVD,"Theodore Francis - Warwick, Ri",Theodore Francis - Warwick, RI
+CHL,"Charleston, Sc",Charleston, SC
+CAE,"Columbia, Sc #Arpt",Columbia, SC #ARPT
+GEO,"Georgetown, Sc",Georgetown, SC
+GSP,"Greenville, Sc",Greenville, SC
+GRR,"Greer, Sc",Greer, SC
+MYR,"Myrtle Beach, Sc",Myrtle Beach, SC
+SPF,"Black Hills, Spearfish, Sd","Black Hills, Spearfish", SD
+HON,"Howes Regional Arpt - Huron, Sd",Howes Regional Arpt - Huron, SD
+SAI,"Saipan, Spn",Saipan, SPN
+TYS,"Mc Ghee Tyson - Alcoa, Tn",Mc Ghee Tyson - Alcoa, TN
+MEM,"Memphis, Tn",Memphis, TN
+NSV,"Nashville, Tn",Nashville, TN
+TRI,"Tri City Arpt, Tn",Tri City Arpt, TN
+ADS,"Addison Airport- Addison, Tx",Addison Airport- Addison, TX
+ADT,"Amistad Dam, Tx",Amistad Dam, TX
+ANZ,"Anzalduas, Tx",Anzalduas, TX
+AUS,"Austin, Tx",Austin, TX
+BEA,"Beaumont, Tx",Beaumont, TX
+BBP,"Big Bend Park, Tx (Bps)",Big Bend Park, TX (BPS)
+SCC,"Bp Spec Coord. Ctr, Tx",Bp Spec Coord. Ctr, TX
+BTC,"Bp Tactical Unit, Tx",Bp Tactical Unit, TX
+BOA,"Bridge Of Americas, Tx",Bridge Of Americas, TX
+BRO,"Brownsville, Tx",Brownsville, TX
+CRP,"Corpus Christi, Tx",Corpus Christi, TX
+DAL,"Dallas, Tx",Dallas, TX
+DLR,"Del Rio, Tx",Del Rio, TX
+DNA,"Donna, Tx",Donna, TX
+EGP,"Eagle Pass, Tx",Eagle Pass, TX
+ELP,"El Paso, Tx",El Paso, TX
+FAB,"Fabens, Tx",Fabens, TX
+FAL,"Falcon Heights, Tx",Falcon Heights, TX
+FTH,"Fort Hancock, Tx",Fort Hancock, TX
+AFW,"Fort Worth Alliance, Tx",Fort Worth Alliance, TX
+FPT,"Freeport, Tx",Freeport, TX
+GAL,"Galveston, Tx",Galveston, TX
+HLG,"Harlingen, Tx",Harlingen, TX
+HID,"Hidalgo, Tx",Hidalgo, TX
+HOU,"Houston, Tx",Houston, TX
+SGR,"Hull Field, Sugar Land Arpt, Tx","Hull Field, Sugar Land Arpt", TX
+LLB,"Juarez-Lincoln Bridge, Tx",Juarez-Lincoln Bridge, TX
+LCB,"Laredo Columbia Bridge, Tx",Laredo Columbia Bridge, TX
+LRN,"Laredo North, Tx",Laredo North, TX
+LAR,"Laredo, Tx",Laredo, TX
+LSE,"Los Ebanos, Tx",Los Ebanos, TX
+IND,"Los Indios, Tx",Los Indios, TX
+LOI,"Los Indios, Tx",Los Indios, TX
+MRS,"Marfa, Tx (Bps)",Marfa, TX (BPS)
+MCA,"Mcallen, Tx",Mcallen, TX
+MAF,"Odessa Regional, Tx",Odessa Regional, TX
+PDN,"Paso Del Norte,Tx",Paso Del Norte,TX
+PBB,"Peace Bridge, Ny",Peace Bridge, NY
+PHR,"Pharr, Tx",Pharr, TX
+PAR,"Port Arthur, Tx",Port Arthur, TX
+ISB,"Port Isabel, Tx",Port Isabel, TX
+POE,"Port Of El Paso, Tx",Port Of El Paso, TX
+PRE,"Presidio, Tx",Presidio, TX
+PGR,"Progreso, Tx",Progreso, TX
+RIO,"Rio Grande City, Tx",Rio Grande City, TX
+ROM,"Roma, Tx",Roma, TX
+SNA,"San Antonio, Tx",San Antonio, TX
+SNN,"Sanderson, Tx",Sanderson, TX
+VIB,"Veteran Intl Bridge, Tx",Veteran Intl Bridge, TX
+YSL,"Ysleta, Tx",Ysleta, TX
+CHA,"Charlotte Amalie, Vi",Charlotte Amalie, VI
+CHR,"Christiansted, Vi",Christiansted, VI
+CRU,"Cruz Bay, St John, Vi","Cruz Bay, St John", VI
+FRK,"Frederiksted, Vi",Frederiksted, VI
+STT,"St Thomas, Vi",St Thomas, VI
+LGU,"Cache Airport - Logan, Ut",Cache Airport - Logan, UT
+SLC,"Salt Lake City, Ut",Salt Lake City, UT
+CHO,"Albemarle Charlottesville, Va",Albemarle Charlottesville, VA
+DAA,"Davison Aaf - Fairfax Cnty, Va",Davison Aaf - Fairfax Cnty, VA
+HOP,"Hopewell, Va",Hopewell, VA
+HEF,"Manassas, Va #Arpt",Manassas, VA #ARPT
+NWN,"Newport, Va",Newport, VA
+NOR,"Norfolk, Va",Norfolk, VA
+RCM,"Richmond, Va",Richmond, VA
+ABS,"Alburg Springs, Vt",Alburg Springs, VT
+ABG,"Alburg, Vt",Alburg, VT
+BEB,"Beebe Plain, Vt",Beebe Plain, VT
+BEE,"Beecher Falls, Vt",Beecher Falls, VT
+BRG,"Burlington, Vt",Burlington, VT
+CNA,"Canaan, Vt",Canaan, VT
+DER,"Derby Line, Vt (I-91)",Derby Line, VT (I-91)
+DLV,"Derby Line, Vt (Rt. 5)",Derby Line, VT (RT. 5)
+ERC,"East Richford, Vt",East Richford, VT
+HIG,"Highgate Springs, Vt",Highgate Springs, VT
+MOR,"Morses Line, Vt",Morses Line, VT
+NPV,"Newport, Vt",Newport, VT
+NRT,"North Troy, Vt",North Troy, VT
+NRN,"Norton, Vt",Norton, VT
+PIV,"Pinnacle Road, Vt",Pinnacle Road, VT
+RIF,"Richfort, Vt",Richfort, VT
+STA,"St Albans, Vt",St Albans, VT
+SWB,"Swanton, Vt (Bp - Sector Hq)",Swanton, VT (BP - SECTOR HQ)
+WBE,"West Berkshire, Vt",West Berkshire, VT
+ABE,"Aberdeen, Wa",Aberdeen, WA
+ANA,"Anacortes, Wa",Anacortes, WA
+BEL,"Bellingham, Wa",Bellingham, WA
+BLI,"Bellingham, Washington #Intl",Bellingham, WASHINGTON #INTL
+BLA,"Blaine, Wa",Blaine, WA
+BWA,"Boundary, Wa",Boundary, WA
+CUR,"Curlew, Wa (Bps)",Curlew, WA (BPS)
+DVL,"Danville, Wa",Danville, WA
+EVE,"Everett, Wa",Everett, WA
+FER,"Ferry, Wa",Ferry, WA
+FRI,"Friday Harbor, Wa",Friday Harbor, WA
+FWA,"Frontier, Wa",Frontier, WA
+KLM,"Kalama, Wa",Kalama, WA
+LAU,"Laurier, Wa",Laurier, WA
+LON,"Longview, Wa",Longview, WA
+MET,"Metaline Falls, Wa",Metaline Falls, WA
+MWH,"Moses Lake Grant County Arpt, Wa",Moses Lake Grant County Arpt, WA
+NEA,"Neah Bay, Wa",Neah Bay, WA
+NIG,"Nighthawk, Wa",Nighthawk, WA
+OLY,"Olympia, Wa",Olympia, WA
+ORO,"Oroville, Wa",Oroville, WA
+PWB,"Pasco, Wa",Pasco, WA
+PIR,"Point Roberts, Wa",Point Roberts, WA
+PNG,"Port Angeles, Wa",Port Angeles, WA
+PTO,"Port Townsend, Wa",Port Townsend, WA
+SEA,"Seattle, Wa",Seattle, WA
+SPO,"Spokane, Wa",Spokane, WA
+SUM,"Sumas, Wa",Sumas, WA
+TAC,"Tacoma, Wa",Tacoma, WA
+PSC,"Tri-Cities - Pasco, Wa",Tri-Cities - Pasco, WA
+VAN,"Vancouver, Wa",Vancouver, WA
+AGM,"Algoma, Wi",Algoma, WI
+BAY,"Bayfield, Wi",Bayfield, WI
+GRB,"Green Bay, Wi",Green Bay, WI
+MNW,"Manitowoc, Wi",Manitowoc, WI
+MIL,"Milwaukee, Wi",Milwaukee, WI
+MSN,"Truax Field - Dane County, Wi",Truax Field - Dane County, WI
+CHS,"Charleston, Wv",Charleston, WV
+CLK,"Clarksburg, Wv",Clarksburg, WV
+BLF,"Mercer County, Wv",Mercer County, WV
+CSP,"Casper, Wy",Casper, WY
+XXX,Not Reported/Unknown,Not Reported/Unknown,
+888,Unidentifed Air / Seaport,Unidentifed Air / Seaport,
+UNK,Unknown Poe,Unknown Poe,
+CLG,"Calgary, Canada",Calgary, CANADA
+EDA,"Edmonton, Canada",Edmonton, CANADA
+YHC,"Hakai Pass, Canada",Hakai Pass, CANADA
+HAL,"Halifax, Ns, Canada","Halifax, Ns", CANADA
+MON,"Montreal, Canada",Montreal, CANADA
+OTT,"Ottawa, Canada",Ottawa, CANADA
+YXE,"Saskatoon, Canada",Saskatoon, CANADA
+TOR,"Toronto, Canada",Toronto, CANADA
+VCV,"Vancouver, Canada",Vancouver, CANADA
+VIC,"Victoria, Canada",Victoria, CANADA
+WIN,"Winnipeg, Canada",Winnipeg, CANADA
+AMS,"Amsterdam-Schiphol, Netherlands",Amsterdam-Schiphol, NETHERLANDS
+ARB,"Aruba, Neth Antilles",Aruba, NETH ANTILLES
+BAN,"Bankok, Thailand",Bankok, THAILAND
+BEI,"Beica #Arpt, Ethiopia",Beica #Arpt, ETHIOPIA
+PEK,"Beijing Capital Intl, Prc",Beijing Capital Intl, PRC
+BDA,"Kindley Field, Bermuda",Kindley Field, BERMUDA
+BOG,"Bogota, El Dorado #Arpt, Colombia","Bogota, El Dorado #Arpt", COLOMBIA
+EZE,"Buenos Aires, Ministro Pist, Argentina","Buenos Aires, Ministro Pist", ARGENTINA
+CUN,"Cancun, Mexico",Cancun, MEXICO
+CRQ,"Caravelas, Ba #Arpt, Brazil","Caravelas, Ba #Arpt", BRAZIL
+MVD,"Carrasco, Uruguay",Carrasco, URUGUAY
+DUB,"Dublin, Ireland",Dublin, IRELAND
+FOU,"Fougamou #Arpt, Gabon",Fougamou #Arpt, GABON
+FBA,"Freeport, Bahamas",Freeport, BAHAMAS
+MTY,"Gen M. Escobedo, Monterrey, Mx","Gen M. Escobedo, Monterrey", MX
+HMO,"Gen Pesqueira Garcia, Mx",Gen Pesqueira Garcia, MX
+GCM,"Grand Cayman, Cayman Island",Grand Cayman, CAYMAN ISLAND
+GDL,"Guadalajara, Miguel Hidal, Mx","Guadalajara, Miguel Hidal", MX
+HAM,"Hamilton, Bermuda",Hamilton, BERMUDA
+ICN,"Inchon, Seoul Korea",Inchon, SEOUL KOREA
+IWA,"Invalid - Iwakuni, Japan",Invalid - Iwakuni, JAPAN
+CND,"Kogalniceanu, Romania",Kogalniceanu, ROMANIA
+LAH,"Labuha Arpt, Indonesia",Labuha Arpt, INDONESIA
+DUR,"Louis Botha, South Africa",Louis Botha, SOUTH AFRICA
+MAL,"Mangole Arpt, Indonesia",Mangole Arpt, INDONESIA
+MDE,"Medellin, Colombia",Medellin, COLOMBIA
+MEX,"Juarez Intl, Mexico City, Mx","Juarez Intl, Mexico City", MX
+LHR,"Middlesex, England",Middlesex, ENGLAND
+NBO,"Nairobi, Kenya",Nairobi, KENYA
+NAS,"Nassau, Bahamas",Nassau, BAHAMAS
+NCA,"North Caicos, Turk & Caiman",North Caicos, TURK & CAIMAN
+PTY,"Omar Torrijos, Panama",Omar Torrijos, PANAMA
+SPV,"Papua, New Guinea",Papua, NEW GUINEA
+UIO,"Quito (Mariscal Sucr), Ecuador",Quito (Mariscal Sucr), ECUADOR
+RIT,"Rome, Italy",Rome, ITALY
+SNO,"Sakon Nakhon #Arpt, Thailand",Sakon Nakhon #Arpt, THAILAND
+SLP,"San Luis Potosi #Arpt, Mexico",San Luis Potosi #Arpt, MEXICO
+SAN,"San Salvador, El Salvador",San Salvador, EL SALVADOR
+SRO,"Santana Ramos #Arpt, Colombia",Santana Ramos #Arpt, COLOMBIA
+GRU,"Guarulhos Intl, Sao Paulo, Brazil","Guarulhos Intl, Sao Paulo", BRAZIL
+SHA,"Shannon, Ireland",Shannon, IRELAND
+HIL,"Shillavo, Ethiopia",Shillavo, ETHIOPIA
+TOK,"Torokina #Arpt, Papua, New Guinea","Torokina #Arpt, Papua", NEW GUINEA
+VER,"Veracruz, Mexico",Veracruz, MEXICO
+LGW,"West Sussex, England",West Sussex, ENGLAND
+ZZZ,Mexico Land (Banco De Mexico),Mexico Land (Banco De Mexico),
+CHN,No Port Code (Chn),No Port Code (Chn),
+CNC,"Cannon Corners, Ny",Cannon Corners, NY
+MAA,Abu Dhabi,Abu Dhabi,
+AG0,"Magnolia, Ar",Magnolia, AR
+BHM,"Bar Harbor, Me",Bar Harbor, ME
+BHX,"Birmingham, Al",Birmingham, AL
+CAK,"Akron, Oh",Akron, OH
+FOK,"Suffolk County, Ny",Suffolk County, NY
+LND,"Lander, Wy",Lander, WY
+MAR,"Marfa, Tx",Marfa, TX
+MLI,"Moline, Il",Moline, IL
+RIV,"Riverside, Ca",Riverside, CA
+RME,"Rome, Ny",Rome, NY
+VNY,"Van Nuys, Ca",Van Nuys, CA
+YUM,"Yuma, Az",Yuma, AZ
+FRG,Collapsed (Fok) 06/15,Collapsed (Fok) 06/15,
+HRL,Collapsed (Hlg) 06/15,Collapsed (Hlg) 06/15,
+ISP,Collapsed (Fok) 06/15,Collapsed (Fok) 06/15,
+JSJ,Collapsed (Saj) 06/15,Collapsed (Saj) 06/15,
+BUS,Collapsed (Buf) 06/15,Collapsed (Buf) 06/15,
+IAG,Collapsed (Nia) 06/15,Collapsed (Nia) 06/15,
+PHN,Collapsed (Phu) 06/15,Collapsed (Phu) 06/15,
+STN,Collapsed (Str) 06/15,Collapsed (Str) 06/15,
+VMB,Collapsed (Vnb) 06/15,Collapsed (Vnb) 06/15,
+T01,Collapsed (Sea) 06/15,Collapsed (Sea) 06/15,
+PHF,No Port Code (Phf),No Port Code (Phf),
+DRV,No Port Code (Drv),No Port Code (Drv),
+FTB,No Port Code (Ftb),No Port Code (Ftb),
+GAC,No Port Code (Gac),No Port Code (Gac),
+GMT,No Port Code (Gmt),No Port Code (Gmt),
+JFA,No Port Code (Jfa),No Port Code (Jfa),
+JMZ,No Port Code (Jmz),No Port Code (Jmz),
+NC8,No Port Code (Nc8),No Port Code (Nc8),
+NYL,No Port Code (Nyl),No Port Code (Nyl),
+OAI,No Port Code (Oai),No Port Code (Oai),
+PCW,No Port Code (Pcw),No Port Code (Pcw),
+WA5,No Port Code (Was),No Port Code (Was),
+WTR,No Port Code (Wtr),No Port Code (Wtr),
+X96,No Port Code (X96),No Port Code (X96),
+XNA,No Port Code (Xna),No Port Code (Xna),
+YGF,No Port Code (Ygf),No Port Code (Ygf),
+5T6,No Port Code (5T6),No Port Code (5T6),
+060,No Port Code (60),No Port Code (60),
+SP0,No Port Code (Sp0),No Port Code (Sp0),
+W55,No Port Code (W55),No Port Code (W55),
+X44,No Port Code (X44),No Port Code (X44),
+AUH,No Port Code (Auh),No Port Code (Auh),
+RYY,No Port Code (Ryy),No Port Code (Ryy),
+SUS,No Port Code (Sus),No Port Code (Sus),
+74S,No Port Code (74S),No Port Code (74S),
+ATW,No Port Code (Atw),No Port Code (Atw),
+CPX,No Port Code (Cpx),No Port Code (Cpx),
+MTH,No Port Code (Mth),No Port Code (Mth),
+PFN,No Port Code (Pfn),No Port Code (Pfn),
+SCH,No Port Code (Sch),No Port Code (Sch),
+ASI,No Port Code (Asi),No Port Code (Asi),
+BKF,No Port Code (Bkf),No Port Code (Bkf),
+DAY,No Port Code (Day),No Port Code (Day),
+Y62,No Port Code (Y62),No Port Code (Y62),
+AG,No Port Code (Ag),No Port Code (Ag),
+BCM,No Port Code (Bcm),No Port Code (Bcm),
+DEC,No Port Code (Dec),No Port Code (Dec),
+PLB,No Port Code (Plb),No Port Code (Plb),
+CXO,No Port Code (Cxo),No Port Code (Cxo),
+JBQ,No Port Code (Jbq),No Port Code (Jbq),
+JIG,No Port Code (Jig),No Port Code (Jig),
+OGS,No Port Code (Ogs),No Port Code (Ogs),
+TIW,No Port Code (Tiw),No Port Code (Tiw),
+OTS,No Port Code (Ots),No Port Code (Ots),
+AMT,No Port Code (Amt),No Port Code (Amt),
+EGE,No Port Code (Ege),No Port Code (Ege),
+GPI,No Port Code (Gpi),No Port Code (Gpi),
+NGL,No Port Code (Ngl),No Port Code (Ngl),
+OLM,No Port Code (Olm),No Port Code (Olm),
+.GA,No Port Code (.Ga),No Port Code (.Ga),
+CLX,No Port Code (Clx),No Port Code (Clx),
+CP,No Port Code (Cp),No Port Code (Cp),
+FSC,No Port Code (Fsc),No Port Code (Fsc),
+NK,No Port Code (Nk),No Port Code (Nk),
+ADU,No Port Code (Adu),No Port Code (Adu),
+AKT,No Port Code (Akt),No Port Code (Akt),
+LIT,No Port Code (Lit),No Port Code (Lit),
+A2A,No Port Code (A2A),No Port Code (A2A),
+OSN,No Port Code (Osn),No Port Code (Osn),

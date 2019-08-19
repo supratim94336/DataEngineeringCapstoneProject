@@ -1,0 +1,56 @@
+state_code,state_name
+AL,Alabama
+AK,Alaska
+AZ,Arizona
+AR,Arkansas
+CA,California
+CO,Colorado
+CT,Connecticut
+DE,Delaware
+DC,Dist. Of Columbia
+FL,Florida
+GA,Georgia
+GU,Guam
+HI,Hawaii
+ID,Idaho
+IL,Illinois
+IN,Indiana
+IA,Iowa
+KS,Kansas
+KY,Kentucky
+LA,Louisiana
+ME,Maine
+MD,Maryland
+MA,Massachusetts
+MI,Michigan
+MN,Minnesota
+MS,Mississippi
+MO,Missouri
+MT,Montana
+NC,N. Carolina
+ND,N. Dakota
+NE,Nebraska
+NV,Nevada
+NH,New Hampshire
+NJ,New Jersey
+NM,New Mexico
+NY,New York
+OH,Ohio
+OK,Oklahoma
+OR,Oregon
+PA,Pennsylvania
+PR,Puerto Rico
+RI,Rhode Island
+SC,S. Carolina
+SD,S. Dakota
+TN,Tennessee
+TX,Texas
+UT,Utah
+VT,Vermont
+VI,Virgin Islands
+VA,Virginia
+WV,W. Virginia
+WA,Washington
+WI,Wisconson
+WY,Wyoming
+99,All Other Codes

@@ -1,0 +1,290 @@
+country_code,country_name
+582,"Mexico Air Sea, And Not Reported (I-94, No Land Arrivals)"
+236,Afghanistan
+101,Albania
+316,Algeria
+102,Andorra
+324,Angola
+529,Anguilla
+518,Antigua-Barbuda
+687,Argentina
+151,Armenia
+532,Aruba
+438,Australia
+103,Austria
+152,Azerbaijan
+512,Bahamas
+298,Bahrain
+274,Bangladesh
+513,Barbados
+104,Belgium
+581,Belize
+386,Benin
+509,Bermuda
+153,Belarus
+242,Bhutan
+688,Bolivia
+717,"Bonaire, St Eustatius, Saba"
+164,Bosnia-Herzegovina
+336,Botswana
+689,Brazil
+525,British Virgin Islands
+217,Brunei
+105,Bulgaria
+393,Burkina Faso
+243,Burma
+375,Burundi
+310,Cameroon
+326,Cape Verde
+526,Cayman Islands
+383,Central African Republic
+384,Chad
+690,Chile
+245,"China, Prc"
+721,Curacao
+270,Christmas Island
+271,Cocos Islands
+691,Colombia
+317,Comoros
+385,Congo
+467,Cook Islands
+575,Costa Rica
+165,Croatia
+584,Cuba
+218,Cyprus
+140,Czech Republic
+723,Faroe Islands (Part Of Denmark)
+108,Denmark
+322,Djibouti
+519,Dominica
+585,Dominican Republic
+240,East Timor
+692,Ecuador
+368,Egypt
+576,El Salvador
+399,Equatorial Guinea
+372,Eritrea
+109,Estonia
+369,Ethiopia
+604,Falkland Islands
+413,Fiji
+110,Finland
+111,France
+601,French Guiana
+411,French Polynesia
+387,Gabon
+338,Gambia
+758,Gaza Strip
+154,Georgia
+112,Germany
+339,Ghana
+143,Gibraltar
+113,Greece
+520,Grenada
+507,Guadeloupe
+577,Guatemala
+382,Guinea
+327,Guinea-Bissau
+603,Guyana
+586,Haiti
+726,Heard And Mcdonald Is.
+149,Holy See/Vatican
+528,Honduras
+206,Hong Kong
+114,Hungary
+115,Iceland
+213,India
+759,Indian Ocean Areas (French)
+729,Indian Ocean Territory
+204,Indonesia
+249,Iran
+250,Iraq
+116,Ireland
+251,Israel
+117,Italy
+388,Ivory Coast
+514,Jamaica
+209,Japan
+253,Jordan
+201,Kampuchea
+155,Kazakhstan
+340,Kenya
+414,Kiribati
+732,Kosovo
+272,Kuwait
+156,Kyrgyzstan
+203,Laos
+118,Latvia
+255,Lebanon
+335,Lesotho
+370,Liberia
+381,Libya
+119,Liechtenstein
+120,Lithuania
+121,Luxembourg
+214,Macau
+167,Macedonia
+320,Madagascar
+345,Malawi
+273,Malaysia
+220,Maldives
+392,Mali
+145,Malta
+472,Marshall Islands
+511,Martinique
+389,Mauritania
+342,Mauritius
+760,Mayotte (Africa - French)
+473,"Micronesia, Fed. States Of"
+157,Moldova
+122,Monaco
+299,Mongolia
+735,Montenegro
+521,Montserrat
+332,Morocco
+329,Mozambique
+371,Namibia
+440,Nauru
+257,Nepal
+123,Netherlands
+508,Netherlands Antilles
+409,New Caledonia
+464,New Zealand
+579,Nicaragua
+390,Niger
+343,Nigeria
+470,Niue
+275,North Korea
+124,Norway
+256,Oman
+258,Pakistan
+474,Palau
+743,Palestine
+504,Panama
+441,Papua New Guinea
+693,Paraguay
+694,Peru
+260,Philippines
+416,Pitcairn Islands
+107,Poland
+126,Portugal
+297,Qatar
+748,Republic Of South Sudan
+321,Reunion
+127,Romania
+158,Russia
+376,Rwanda
+128,San Marino
+330,Sao Tome And Principe
+261,Saudi Arabia
+391,Senegal
+142,Serbia And Montenegro
+745,Serbia
+347,Seychelles
+348,Sierra Leone
+207,Singapore
+141,Slovakia
+166,Slovenia
+412,Solomon Islands
+397,Somalia
+373,South Africa
+276,South Korea
+129,Spain
+244,Sri Lanka
+346,St. Helena
+522,St. Kitts-Nevis
+523,St. Lucia
+502,St. Pierre And Miquelon
+524,St. Vincent-Grenadines
+716,Saint Barthelemy
+736,Saint Martin
+749,Saint Maarten
+350,Sudan
+602,Suriname
+351,Swaziland
+130,Sweden
+131,Switzerland
+262,Syria
+268,Taiwan
+159,Tajikistan
+353,Tanzania
+263,Thailand
+304,Togo
+417,Tonga
+516,Trinidad And Tobago
+323,Tunisia
+264,Turkey
+161,Turkmenistan
+527,Turks And Caicos Islands
+420,Tuvalu
+352,Uganda
+162,Ukraine
+296,United Arab Emirates
+135,United Kingdom
+695,Uruguay
+163,Uzbekistan
+410,Vanuatu
+696,Venezuela
+266,Vietnam
+469,Wallis And Futuna Islands
+757,West Indies (French)
+333,Western Sahara
+465,Western Samoa
+216,Yemen
+139,Yugoslavia
+301,Zaire
+344,Zambia
+315,Zimbabwe
+403,Invalid: American Samoa
+712,Invalid: Antarctica
+700,Invalid: Born On Board Ship
+719,Invalid: Bouvet Island (Antarctica/Norway Terr.)
+574,Invalid: Canada
+720,Invalid: Canton And Enderbury Isls
+106,Invalid: Czechoslovakia
+739,Invalid: Dronning Maud Land (Antarctica-Norway)
+394,Invalid: French Southern And Antarctic
+501,Invalid: Greenland
+404,Invalid: Guam
+730,Invalid: International Waters
+731,Invalid: Johnson Island
+471,"Invalid: Mariana Islands, Northern"
+737,Invalid: Midway Islands
+753,Invalid: Minor Outlying Islands - Usa
+740,Invalid: Neutral Zone (S. Arabia/Iraq)
+710,Invalid: Non-Quota Immigrant
+505,Invalid: Puerto Rico
+0,Invalid: Stateless
+705,Invalid: Stateless
+583,Invalid: United States
+407,Invalid: United States
+999,Invalid: Unknown
+239,Invalid: Unknown Country
+134,Invalid: Ussr
+506,Invalid: U.S. Virgin Islands
+755,Invalid: Wake Island
+311,Collapsed Tanzania (Should Not Show)
+741,Collapsed Curacao (Should Not Show)
+54,No Country Code (54)
+100,No Country Code (100)
+187,No Country Code (187)
+190,No Country Code (190)
+200,No Country Code (200)
+219,No Country Code (219)
+238,No Country Code (238)
+277,No Country Code (277)
+293,No Country Code (293)
+300,No Country Code (300)
+319,No Country Code (319)
+365,No Country Code (365)
+395,No Country Code (395)
+400,No Country Code (400)
+485,No Country Code (485)
+503,No Country Code (503)
+589,No Country Code (589)
+592,No Country Code (592)
+791,No Country Code (791)
+849,No Country Code (849)
+914,No Country Code (914)
+944,No Country Code (944)
+996,No Country Code (996)

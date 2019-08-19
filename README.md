@@ -3,7 +3,20 @@
 ### Objective
 
 ---
-Under construction 👷
+In this project we are going to work with US immigraton data from the 
+year 1994. We have facts such as visa types, transport modes, landing 
+ports, us state codes, country codes. Apart from the sas7bdat formatted
+immigration data we have us airport information and us demographics 
+data. We are going to parse SAS descriptor files for all the dimensions 
+and sas7bdat files for all the facts. The tools we are going to use here
+are Apache Spark, Apache Airflow, Amazon Redshift, Amazon S3. 
+
+We will be reading, parsing and cleaning the data from local file
+systems, Amazon S3 and transferring data to redshift tables in AWS. We
+will be orchestrating the flow of data through Apache Airflow DAGs. 
+
+Finally we will be using some SQL queries to extract some valuable stats
+and graphs from the data itself. 
 
 ### Installing and starting
 
@@ -139,7 +152,21 @@ This is a simple table of airport codes and corresponding cities. It comes from 
 ### Run the project
 
 ---
-under construction 👷
+1. Follow all the setup mentioned above
+2. You have to setup all the connections and variables in the Airflow
+admin  
+    i. Setup aws connection with user credentials (access_key and 
+    secret_key with login and password)  
+    ii. Setup Redshift connection with user, password, host, port, 
+    schema, db  
+    iii. Setup iam_role for your aws account  
+    iv. Setup variables for temp_input, temp_output, spark_path (spark
+    manipulation path for parquet files), sas_file (sas7bdat descriptor 
+    files)  
+    v. Place all the csv inputs inside temp_output directory   
+    vi. create a folder called 'spark_path' inside \airflow\dags\
+
+
 ### Links for Airflow
 
 ---
