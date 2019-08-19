@@ -23,7 +23,7 @@ and graphs from the data itself.
 ### Data Model
 
 ---
-👷 Under Construction
+![alt text](img/schema.png)
 
 ### Installing and starting
 

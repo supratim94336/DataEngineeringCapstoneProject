@@ -1,0 +1,72 @@
+Table immigration as im {
+  cicid FLOAT
+  i94yr FLOAT
+  i94mon FLOAT
+  i94cit FLOAT
+  i94res FLOAT
+  i94port VARCHAR
+  arrdate FLOAT
+  i94mode FLOAT
+  i94addr VARCHAR
+  depdate FLOAT
+  i94bir FLOAT
+  i94visa FLOAT
+  count FLOAT
+  dtadfile VARCHAR
+  visapost VARCHAR
+  occup VARCHAR
+  entdepa VARCHAR
+  entdepd VARCHAR
+  entdepu VARCHAR
+  matflag VARCHAR
+  biryear FLOAT
+  dtaddto VARCHAR
+  gender VARCHAR
+  insnum VARCHAR
+  airline VARCHAR
+  admnum FLOAT
+  fltno VARCHAR
+  visatype VARCHA
+}
+Table i94visa as visa {
+  visa_code INT
+  visa_reason VARCHAR
+}
+Ref: im.i94visa > visa.visa_code
+Table i94mode as mode {
+  trans_code INT
+  trans_name VARCHAR
+}
+Ref: im.i94mode > mode.trans_code
+Table i94res as res {
+  country_code INT
+  country_name VARCHAR
+}
+Ref: im.i94res > res.country_code
+Table i94addr as addr {
+  state_code VARCHAR
+  state_name VARCHAR
+}
+Ref: im.i94addr > addr.state_code
+Table i94ports as ports {
+  port_code VARCHAR
+  port_of_entry VARCHAR
+  port_city VARCHAR
+  port_state_or_country VARCHAR
+}
+Ref: im.i94port > ports.port_code
+Table us_cities_demographics as demographics {
+  city VARCHAR
+  state VARCHAR
+  median_age FLOAT
+  male_population FLOAT
+  female_population FLOAT
+  total_population FLOAT
+  number_of_veterans FLOAT
+  foreign_born FLOAT
+  average_household_size FLOAT
+  state_code VARCHAR
+  race VARCHAR
+  count INT
+}
+Ref: addr.state_code > demographics.state
