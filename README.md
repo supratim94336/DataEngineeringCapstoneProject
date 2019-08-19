@@ -160,7 +160,7 @@ admin
     ii. Setup Redshift connection with user, password, host, port, 
     schema, db  
     iii. Setup iam_role for your aws account  
-    iv. Setup variables for temp_input, temp_output, spark_path (spark
+    iv. Setup variables for 'temp_input', 'temp_output', 'spark_path' (spark
     manipulation path for parquet files), sas_file (sas7bdat descriptor 
     files)  
     v. Place all the csv inputs inside temp_output directory   
