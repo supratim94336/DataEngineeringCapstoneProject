@@ -1,5 +1,6 @@
-## Data Engineering Capstone Project for Udacity
 <img align="right" src="https://eclectic-thoughts.com/wp-content/uploads/2018/04/Udacity_logo-421x500.png" width=108>
+
+## Data Engineering Capstone Project for Udacity
 
 ### Objective  
 
