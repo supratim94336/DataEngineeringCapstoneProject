@@ -20,6 +20,11 @@ will be orchestrating the flow of data through Apache Airflow DAGs.
 Finally we will be using some SQL queries to extract some valuable stats
 and graphs from the data itself. 
 
+### Data Model
+
+---
+👷 Under Construction
+
 ### Installing and starting
 
 ---
@@ -171,6 +176,15 @@ admin
     vii. Create a variable for using the S3 bucket for storing the data 
     as 'S3_bucket'
 
+### Test it Yourself!
+
+---
+👷 Under Construction
+
+### Stats and Graphs
+
+---
+👷 Under Construction
 
 ### Links for Airflow
 
