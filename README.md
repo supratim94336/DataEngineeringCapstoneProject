@@ -183,3 +183,6 @@ https://www.astronomer.io/guides/dag-best-practices/
 <img align="left" src="https://upload.wikimedia.org/wikipedia/en/2/29/Apache_Spark_Logo.svg" width=108>
 <img align="left" src="https://ncrocfer.github.io/images/airflow-logo.png" width=108>
 <img align="left" src="https://upload.wikimedia.org/wikipedia/en/c/cd/Anaconda_Logo.png" width=108>
+<img align="left" src="https://cdn.sisense.com/wp-content/uploads/aws-redshift-connector.png" width=108>
+<img align="left" src="https://braze-marketing-assets.s3.amazonaws.com/images/partner_logos/amazon-s3.png" width=108>
+<img align="left" src="https://miro.medium.com/max/601/1*PPIp7twJJUknfohZqtL8pQ.png" width=108>
