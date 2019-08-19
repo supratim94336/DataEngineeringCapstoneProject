@@ -1,6 +1,7 @@
 ## Data Engineering Capstone Project for Udacity
+<img align="right" src="https://abeon-hosting.com/images/udacity-logo-png-6.jpg" width=108>
 
-### Objective
+### Objective  
 
 ---
 In this project we are going to work with US immigraton data from the 
@@ -188,3 +189,4 @@ https://www.astronomer.io/guides/dag-best-practices/
 <img align="left" src="https://upload.wikimedia.org/wikipedia/en/c/cd/Anaconda_Logo.png" width=108>
 <img align="left" src="https://cdn.sisense.com/wp-content/uploads/aws-redshift-connector.png" width=108>
 <img align="left" src="https://braze-marketing-assets.s3.amazonaws.com/images/partner_logos/amazon-s3.png" width=108>
+
