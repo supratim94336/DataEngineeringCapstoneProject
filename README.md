@@ -177,3 +177,9 @@ https://airflow.apache.org/macros.html
 https://medium.com/datareply/airflow-lesser-known-tips-tricks-and-best-practises-cf4d4a90f8f  
 https://medium.com/handy-tech/airflow-tips-tricks-and-pitfalls-9ba53fba14eb  
 https://www.astronomer.io/guides/dag-best-practices/
+
+### Technologies Used
+<img align="right" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/512px-Amazon_Web_Services_Logo.svg.png" width=108>
+<img align="right" src="https://upload.wikimedia.org/wikipedia/en/2/29/Apache_Spark_Logo.svg" width=108>
+<img align="right" src="https://ncrocfer.github.io/images/airflow-logo.png" width=108>
+<img align="right" src="https://upload.wikimedia.org/wikipedia/en/c/cd/Anaconda_Logo.png" width=108>
