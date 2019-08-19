@@ -153,7 +153,8 @@ This is a simple table of airport codes and corresponding cities. It comes from 
 
 ---
 1. Follow all the setup mentioned above
-2. You have to setup all the connections and variables in the Airflow
+2. Create a bucket in region 'us-west-2' in Amazon S3
+3. You have to setup all the connections and variables in the Airflow
 admin  
     i. Setup aws connection with user credentials (access_key and 
     secret_key with login and password)  
@@ -164,7 +165,9 @@ admin
     manipulation path for parquet files), sas_file (sas7bdat descriptor 
     files)  
     v. Place all the csv inputs inside temp_output directory   
-    vi. create a folder called 'spark_path' inside \airflow\dags\
+    vi. Create a folder called 'spark_path' inside \airflow\dags\  
+    vii. Create a variable for using the S3 bucket for storing the data 
+    as 'S3_bucket'
 
 
 ### Links for Airflow
@@ -184,5 +187,5 @@ https://www.astronomer.io/guides/dag-best-practices/
 <img align="left" src="https://ncrocfer.github.io/images/airflow-logo.png" width=108>
 <img align="left" src="https://upload.wikimedia.org/wikipedia/en/c/cd/Anaconda_Logo.png" width=108>
 <img align="left" src="https://cdn.sisense.com/wp-content/uploads/aws-redshift-connector.png" width=108>
-<img align="left" src="https://braze-marketing-assets.s3.amazonaws.com/images/partner_logos/amazon-s3.png" width=108>
+<img align="left" src="https://miro.medium.com/max/700/1*gXSoA4l0UVufh0C6IG2aWA.jpeg" width=108>
 <img align="left" src="https://miro.medium.com/max/601/1*PPIp7twJJUknfohZqtL8pQ.png" width=108>
