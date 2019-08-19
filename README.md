@@ -23,7 +23,7 @@ and graphs from the data itself.
 ### Data Model
 
 ---
-![alt text](img/schema.png)
+![alt text](img/schema.PNG)
 
 ### Installing and starting
 
