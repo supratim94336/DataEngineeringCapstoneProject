@@ -319,3 +319,4 @@ venv.bak/
 
 /extraction/
 /load/
+/test.py
