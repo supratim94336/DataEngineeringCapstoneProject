@@ -62,7 +62,18 @@ state code information
 
 ### The database needed to be accessed by 100+ people:
 - People are granted usage on schema, so not everyone but people who 
-have access to the data can use it as necessary
+have access to the data can use it as necessary. Best way is to use 
+groups. Below we use the 'webDevuser2pass' to manage 100 different users
+
+Follow the code:-
+```bash
+create schema webapp;
+create group webdevusers;
+grant all on schema webapp to group webdevusers;
+create group webappusers;
+create user webdevuser1 password 'webDevuser2pass' in group webappusers;
+grant usage on schema webapp to group webappusers;
+```
 
 
 ## Defending Decisions

@@ -33,7 +33,7 @@ default_args = {
 dag = DAG('udacity_capstone',
           default_args=default_args,
           description='Data Engineering Capstone Project',
-          schedule_interval='@yearly'
+          schedule_interval='@daily'
           )
 
 # dummy for node 0
