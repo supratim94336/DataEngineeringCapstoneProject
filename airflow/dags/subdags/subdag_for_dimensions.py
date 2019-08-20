@@ -109,7 +109,7 @@ def load_dimension_subdag(
         dag=dag,
         redshift_conn_id="redshift",
         aws_credentials_id="aws_default",
-        file='airport_codes.csv',
+        file='airport-codes_csv.csv',
         delimiter=',',
         table='airport_codes',
         s3_bucket="udacity-data-lakes-supratim",

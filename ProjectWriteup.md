@@ -1,33 +1,34 @@
-## Scoping the Project
+Scoping the Project
 ---
+
 The purpose is to produce interesting stats from the US immigration 
 data, airports around the world, and different dimensions such as visa 
 type, transport mode, nationality etc.
 
 ### Steps Taken:
-The steps taken are in the following order:
-    - Gather the data:
+The steps taken are in the following order:  
+    **Gather the data**:  
         This took a while as different kinds of formats were chosen, I
         needed to fix my mindset on which data I will actually use in 
         future for my analysis and queries. I fixated on .sas7bdat 
         formatted immigration data which fulfills the minimum number of 
         rows requirements, the cleaned airport data for dimensions and
         SAS descriptor file for fulfilling the different kind of formats
-        to be chosen for the project
-    - Study the data:
+        to be chosen for the project  
+    **Study the data**:  
         This took a while as I needed to understand what kind of 
         pre-processing I would use to clean the individual datasets 
         mentioned above. Dropping rows on a condition, filtering rows 
-        according to other dimensions and facts etc.
-    - Choice of infrastructure:
+        according to other dimensions and facts etc.  
+    **Choice of infrastructure**:  
         After studying the data I decided upon certain tools and 
         technologies, to the point where I am comfortable; I made use of
         maximum number of skills that I think I learnt through out the 
-        process.
-    - Implementation and Testing: 
+        process.  
+    **Implementation and Testing**:   
         Once my pipeline started running, I did all kinds of quality 
         checks to ensure that data is processed correctly and provided a
-        Jupyter notebook to test the project.
+        Jupyter notebook to test the project.  
        
 ### Purpose of Final Data Model:
 Gather interesting insights like demographic population based on certain
@@ -43,7 +44,7 @@ dimensions such as visa type, mode of transport, nationality codes, US
 state code information
 
 
-## Addressing other scenarios
+Addressing other scenarios
 ---
 
 ### Data Increased by 100%:
@@ -65,7 +66,7 @@ state code information
 have access to the data can use it as necessary
 
 
-## Defending Decisions
+Defending Decisions
 ---
 
 ### The choice of tools, technologies:
