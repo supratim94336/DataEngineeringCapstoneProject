@@ -178,8 +178,16 @@ admin
     files)  
     v. Place all the csv inputs inside temp_output directory   
     vi. Create a folder called 'spark_path' inside \airflow\dags\  
-    vii. Create a variable for using the S3 bucket for storing the data 
-    as 'S3_bucket'
+  
+    Example:  
+    
+    | variable     | example value |
+    |:-------------|-------------:|
+    | iam_role | #### |
+    | sas_file | /home/workspace/airflow/dags/temp_input/I94_SAS_Labels_Descriptions.SAS |
+    | spark_path | /home/workspace/airflow/dags/spark_path |
+    | temp_input | /home/workspace/airflow/dags/temp_input/ |
+    | temp_output | /home/workspace/airflow/dags/temp_output/ |
 
 ### Test it Yourself!
 
