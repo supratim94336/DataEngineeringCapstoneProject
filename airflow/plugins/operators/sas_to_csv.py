@@ -90,7 +90,8 @@ class SASToCSVOperator(BaseOperator):
             logging.info("writing to csv files ...")
             for table in sas_label_ext.keys():
                 if 'df' in sas_label_ext[table].keys():
-                    with open(os.path.join(self.output_path, table + ".csv"),
+                    with open(os.path.join(self.output_path, table +
+                                                             ".csv"),
                               "w") as output_file:
                         sas_label_ext[table]['df'].to_csv(output_file,
                                                           index=False)

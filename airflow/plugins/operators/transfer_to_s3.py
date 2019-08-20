@@ -29,8 +29,10 @@ class TransferToS3Operator(BaseOperator):
         logging.info('Reading AWS Credentials ... ')
         aws_hook = AwsHook(self.aws_credentials_id)
         credentials = aws_hook.get_credentials()
-        client = boto3.client('s3', aws_access_key_id=credentials.access_key,
-                              aws_secret_access_key=credentials.secret_key)
+        client = boto3.client(
+                            's3',
+                            aws_access_key_id=credentials.access_key,
+                            aws_secret_access_key=credentials.secret_key)
         transfer = S3Transfer(client)
         logging.info('Copying Files ... ')
         for subdir, dirs, files in os.walk(self.input_path):

@@ -1,6 +1,8 @@
 # generic
 from datetime import datetime, timedelta
+import pandas as pd
 import os
+
 # airflow
 from airflow import DAG
 from airflow.operators.dummy_operator import DummyOperator
@@ -13,9 +15,7 @@ from subdags.subdag_for_dimensions import load_dimension_subdag
 from airflow.models import Variable
 from helpers import SqlQueries
 from airflow.operators.subdag_operator import SubDagOperator
-# temp
-import pandas as pd
-import os
+
 
 default_args = {
     'owner': 'udacity',
@@ -112,12 +112,12 @@ run_quality_checks = DataQualityOperator(
 )
 
 # def clean_airports(**kwargs):
-#     df = pd.read_csv(os.path.join(Variable.get("temp_input"), "airport-codes_csv.csv"))
-#     df_split = pd.DataFrame(df['coordinates'].str.split(',',1).tolist(),
-#                                    columns = ['latitude','longitude'])
-#     df_temp = pd.merge(df, df_split, left_index=True, right_index=True)
-#     df_temp.drop('coordinates', axis=1, inplace=True)
-#     df_temp.to_csv(os.path.join(Variable.get("temp_output"), "airport-codes_csv.csv"))
+#     df = pd.read_csv(os.path.join(Variable.get("temp_input"),
+#     "airport-codes_csv.csv"))
+#     df.dropna(how='all')
+#     df_new = df['iso_country'] == 'US'
+#     df_new.to_csv(os.path.join(Variable.get("temp_output"),
+#     "airport-codes_csv.csv"))
 
 # clean_airports_task = PythonOperator(
 #     task_id='clean_airports_task',

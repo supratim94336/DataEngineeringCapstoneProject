@@ -33,7 +33,8 @@ class StageToRedshiftOperator(BaseOperator):
         redshift = PostgresHook(postgres_conn_id=self.redshift_conn_id)
         self.log.info("Copying data from S3 to Redshift")
         rendered_key = self.s3_key.format(**context)
-        s3_path = "s3://{}/{}/{}".format(self.s3_bucket, rendered_key, self.file)
+        s3_path = "s3://{}/{}/{}".format(self.s3_bucket, rendered_key,
+                                         self.file)
         formatted_sql = self.sql_stmt.format(
             self.table,
             s3_path,
