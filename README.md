@@ -25,6 +25,11 @@ and graphs from the data itself.
 ---
 ![alt text](img/schema.PNG)
 
+### Data Pipeline
+
+___
+
+
 ### Installing and starting
 
 ---

@@ -112,6 +112,8 @@ class SAS7ToParquet(BaseOperator):
 
         logging.info('Writing parquet to disc ... ')
         if os.path.exists(self.output_path):
-           shutil.rmtree(self.output_path)
+            shutil.rmtree(self.output_path)
         if df_all.count() > 0:
-           df_all.write.parquet(self.output_path)
+            df_temp = df_all.filter(df_all.i94addr.isNotNull()) \
+                            .filter(df_all.i94res.isNotNull())
+            df_temp.write.parquet(self.output_path)

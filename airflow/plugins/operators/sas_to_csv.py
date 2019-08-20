@@ -21,7 +21,7 @@ class SASToCSVOperator(BaseOperator):
         self.output_path = output_path
 
     def execute(self, context):
-        with open(self.input_path, "r") as main_file:
+        with open(self.input_path, "r", encoding='utf-8') as main_file:
             file = main_file.read()
 
             sas_label_ext = {}

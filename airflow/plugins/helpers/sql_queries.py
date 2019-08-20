@@ -120,7 +120,7 @@ class SqlQueries:
     """
 
     create_tables = immigration + airports + i94ports + i94visa + i94mode + i94addr + i94res + us_cities_demographics
-    tables = ["immigration", "airport_codes", "i94port", "i94visa",
+    tables = ["immigration", "airport_codes", "i94ports", "i94visa",
               "i94mode", "i94addr", "i94res", "us_cities_demographics"]
 
     copy_csv_cmd = """
@@ -132,6 +132,7 @@ class SqlQueries:
     TRUNCATECOLUMNS
     CSV;
     """
+    count_check = """SELECT CASE WHEN COUNT(*) > 1 THEN 1 ELSE 0 END AS non_empty FROM {}"""
 
     copy_parquet_cmd = """
                         COPY public.{} FROM '{}'
