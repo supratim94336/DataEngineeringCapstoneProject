@@ -1,26 +1,26 @@
 # generic
 from datetime import datetime, timedelta
-import pandas as pd
 import os
 
 # airflow
 from airflow import DAG
 from airflow.operators.dummy_operator import DummyOperator
 from airflow.operators.postgres_operator import PostgresOperator
-from airflow.operators import (SASToCSVOperator, TransferToS3Operator,
-                               SAS7ToParquet, StageToRedshiftOperator,
-                               DataQualityOperator)
+from airflow.operators import (SASToCSVOperator, TransferToS3Operator, SAS7ToParquet, StageToRedshiftOperator, DataQualityOperator)
 from airflow.operators.python_operator import PythonOperator
 from subdags.subdag_for_dimensions import load_dimension_subdag
 from airflow.models import Variable
 from helpers import SqlQueries
 from airflow.operators.subdag_operator import SubDagOperator
+# temp
+import pandas as pd
+import os
 
 
 default_args = {
     'owner': 'udacity',
-    'start_date': datetime(2018, 1, 1),
-    'end_date': datetime(2018, 12, 1),
+    'start_date': datetime(2018, 1, 1, 7),
+    'end_date': datetime(2019, 12, 1, 7),
     'email_on_retry': False,
     'retries': 3,
     'catchup': False,
@@ -33,7 +33,7 @@ default_args = {
 dag = DAG('udacity_capstone',
           default_args=default_args,
           description='Data Engineering Capstone Project',
-          schedule_interval='@daily'
+          schedule_interval='@hourly'
           )
 
 # dummy for node 0
@@ -54,12 +54,12 @@ transfer_to_s3_csv = TransferToS3Operator(
     dag=dag,
     aws_credentials_id="aws_default",
     input_path=Variable.get("temp_output"),
-    bucket_name="udacity-data-lakes-supratim",
+    bucket_name=Variable.get("s3_bucket"),
     file_ext="csv",
     provide_context=True
 )
 
-sas7bdat_to_parquet = SAS7ToParquet(
+sas7bdat_to_parquet = SAS7ToParquet (
     task_id='sas7bdat_to_parquet',
     dag=dag,
     input_path=Variable.get("temp_input"),
@@ -72,9 +72,16 @@ transfer_to_s3_parquet = TransferToS3Operator(
     dag=dag,
     aws_credentials_id="aws_default",
     input_path=Variable.get("spark_path"),
-    bucket_name="udacity-data-lakes-supratim",
+    bucket_name=Variable.get("s3_bucket"),
     file_ext="parquet",
     provide_context=True
+)
+
+task_create_schema = PostgresOperator(
+    task_id="create_schema",
+    postgres_conn_id="redshift",
+    sql=SqlQueries.create_schema,
+    dag=dag
 )
 
 task_drop_table = PostgresOperator(
@@ -110,26 +117,22 @@ run_quality_checks = DataQualityOperator(
     sql_stmt=SqlQueries.count_check,
     tables=SqlQueries.tables
 )
-
-# def clean_airports(**kwargs):
-#     df = pd.read_csv(os.path.join(Variable.get("temp_input"),
-#     "airport-codes_csv.csv"))
-#     df.dropna(how='all')
-#     df_new = df['iso_country'] == 'US'
-#     df_new.to_csv(os.path.join(Variable.get("temp_output"),
-#     "airport-codes_csv.csv"))
-
-# clean_airports_task = PythonOperator(
-#     task_id='clean_airports_task',
-#     python_callable=clean_airports,  # changed
-#     provide_context=True,
+# grant_access = """
+#                create group webappusers;
+#                create user webappuser1 password 'webAppuser1pass' in group webappusers;
+#                grant usage on schema project to group webappusers;
+#                """
+# grant_access_to_users = PostgresOperator(
+#     task_id="grant_access",
+#     postgres_conn_id="redshift",
+#     sql=grant_access,
 #     dag=dag
-#     )
+# )
 
 # dummy for node end
 end_operator = DummyOperator(task_id='Stop_execution', dag=dag)
 
 # order
-start_operator >> convert_sas_to_csv >> transfer_to_s3_csv >> task_drop_table
-start_operator >> sas7bdat_to_parquet >> transfer_to_s3_parquet >> task_drop_table
-task_drop_table >> task_create_table >> load_dimension_subdag_task >> run_quality_checks >> end_operator
+start_operator >> convert_sas_to_csv >> transfer_to_s3_csv >> task_create_schema
+start_operator >> sas7bdat_to_parquet >> transfer_to_s3_parquet >> task_create_schema
+task_create_schema >> task_drop_table >> task_create_table >> load_dimension_subdag_task >> run_quality_checks >> end_operator
