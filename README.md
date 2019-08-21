@@ -29,6 +29,7 @@ and graphs from the data itself.
 
 ___
 ![alt text](img/pipeline.png)
+![alt_text](img/pipeline-tree.png)
 
 ### Installing and starting
 
@@ -184,6 +185,7 @@ admin
     | variable     | example value |
     |:-------------|-------------:|
     | iam_role | #### |
+    | s3_bucket | #### |
     | sas_file | /home/workspace/airflow/dags/temp_input/I94_SAS_Labels_Descriptions.SAS |
     | spark_path | /home/workspace/airflow/dags/spark_path |
     | temp_input | /home/workspace/airflow/dags/temp_input/ |
@@ -192,12 +194,30 @@ admin
 ### Test it Yourself!
 
 ---
-👷 Under Construction
+
+**Example Queries**
+- Get nationalities who were immigrating in decreasing order of people
+count
+SELECT top 10 b.country_name, COUNT(cicid)
+FROM project.immigration a INNER JOIN project.i94res b ON a.i94res=b.country_code
+GROUP BY b.country_name
+ORDER BY COUNT(cicid) DESC
+
 
 ### Stats and Graphs
 
 ---
-👷 Under Construction
+#### City from where immigrants arrived
+![alt text](img/city_intake.png)
+
+#### Different kinds of airports
+![alt_text](img/diff_airports.png)
+
+#### Immigrants from different countries
+![alt text](img/no_of_immigrants.png)
+
+#### Small airports from different states
+![alt_text](img/state_airports.png)
 
 ### Links for Airflow
 

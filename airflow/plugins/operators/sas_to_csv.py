@@ -8,7 +8,7 @@ import os
 
 class SASToCSVOperator(BaseOperator):
 
-    ui_color = '#89DA59'
+    ui_color = '#FFC0CB'
 
     @apply_defaults
     def __init__(self,
@@ -90,8 +90,7 @@ class SASToCSVOperator(BaseOperator):
             logging.info("writing to csv files ...")
             for table in sas_label_ext.keys():
                 if 'df' in sas_label_ext[table].keys():
-                    with open(os.path.join(self.output_path, table +
-                                                             ".csv"),
+                    with open(os.path.join(self.output_path, table + ".csv"),
                               "w") as output_file:
                         sas_label_ext[table]['df'].to_csv(output_file,
                                                           index=False)

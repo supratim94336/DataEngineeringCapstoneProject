@@ -34,7 +34,7 @@ def load_dimension_subdag(
         file='i94port.csv',
         delimiter=',',
         table='i94ports',
-        s3_bucket="udacity-data-lakes-supratim",
+        s3_bucket=Variable.get("s3_bucket"),
         s3_key="csv",
         sql_stmt=SqlQueries.copy_csv_cmd,
         provide_context=True)
@@ -47,7 +47,7 @@ def load_dimension_subdag(
         file='i94visa.csv',
         delimiter=',',
         table='i94visa',
-        s3_bucket="udacity-data-lakes-supratim",
+        s3_bucket=Variable.get("s3_bucket"),
         s3_key="csv",
         sql_stmt=SqlQueries.copy_csv_cmd,
         provide_context=True)
@@ -60,7 +60,7 @@ def load_dimension_subdag(
         file='i94mode.csv',
         delimiter=',',
         table='i94mode',
-        s3_bucket="udacity-data-lakes-supratim",
+        s3_bucket=Variable.get("s3_bucket"),
         s3_key="csv",
         sql_stmt=SqlQueries.copy_csv_cmd,
         provide_context=True)
@@ -73,7 +73,7 @@ def load_dimension_subdag(
         file='i94addr.csv',
         delimiter=',',
         table='i94addr',
-        s3_bucket="udacity-data-lakes-supratim",
+        s3_bucket=Variable.get("s3_bucket"),
         s3_key="csv",
         sql_stmt=SqlQueries.copy_csv_cmd,
         provide_context=True)
@@ -86,7 +86,7 @@ def load_dimension_subdag(
         file='i94cit&i94res.csv',
         delimiter=',',
         table='i94res',
-        s3_bucket="udacity-data-lakes-supratim",
+        s3_bucket=Variable.get("s3_bucket"),
         s3_key="csv",
         sql_stmt=SqlQueries.copy_csv_cmd,
         provide_context=True)
@@ -99,7 +99,7 @@ def load_dimension_subdag(
         file='us-cities-demographics.csv',
         delimiter=';',
         table='us_cities_demographics',
-        s3_bucket="udacity-data-lakes-supratim",
+        s3_bucket=Variable.get("s3_bucket"),
         s3_key="csv",
         sql_stmt=SqlQueries.copy_csv_cmd,
         provide_context=True)
@@ -112,7 +112,7 @@ def load_dimension_subdag(
         file='airport-codes_csv.csv',
         delimiter=',',
         table='airport_codes',
-        s3_bucket="udacity-data-lakes-supratim",
+        s3_bucket=Variable.get("s3_bucket"),
         s3_key="csv",
         sql_stmt=SqlQueries.copy_csv_cmd,
         provide_context=True)
@@ -134,7 +134,7 @@ def load_dimension_subdag(
         python_callable=parquet_to_redshift,  # changed
         provide_context=True,
         op_kwargs={'table': "immigration",
-                   's3_bucket': 'udacity-data-lakes-supratim',
+                   's3_bucket': Variable.get("s3_bucket"),
                    's3_key': 'parquet',
                    'iam_role': Variable.get('iam_role'),
                    'sql_stmt': SqlQueries.copy_parquet_cmd,

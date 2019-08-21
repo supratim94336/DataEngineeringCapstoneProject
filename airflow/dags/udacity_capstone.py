@@ -1,5 +1,7 @@
 # generic
 from datetime import datetime, timedelta
+import os
+
 # airflow
 from airflow import DAG
 from airflow.operators.dummy_operator import DummyOperator
@@ -17,8 +19,8 @@ import os
 
 default_args = {
     'owner': 'udacity',
-    'start_date': datetime(2018, 1, 1),
-    'end_date': datetime(2018, 12, 1),
+    'start_date': datetime(2018, 1, 1, 7),
+    'end_date': datetime(2019, 12, 1, 7),
     'email_on_retry': False,
     'retries': 3,
     'catchup': False,
@@ -31,7 +33,7 @@ default_args = {
 dag = DAG('udacity_capstone',
           default_args=default_args,
           description='Data Engineering Capstone Project',
-          schedule_interval='@yearly'
+          schedule_interval='@hourly'
           )
 
 # dummy for node 0
@@ -52,7 +54,7 @@ transfer_to_s3_csv = TransferToS3Operator(
     dag=dag,
     aws_credentials_id="aws_default",
     input_path=Variable.get("temp_output"),
-    bucket_name="udacity-data-lakes-supratim",
+    bucket_name=Variable.get("s3_bucket"),
     file_ext="csv",
     provide_context=True
 )
@@ -70,7 +72,7 @@ transfer_to_s3_parquet = TransferToS3Operator(
     dag=dag,
     aws_credentials_id="aws_default",
     input_path=Variable.get("spark_path"),
-    bucket_name="udacity-data-lakes-supratim",
+    bucket_name=Variable.get("s3_bucket"),
     file_ext="parquet",
     provide_context=True
 )
@@ -101,7 +103,7 @@ load_dimension_subdag_task = SubDagOperator(
         parent_dag_name="udacity_capstone",
         task_id="load_dimensions",
         redshift_conn_id="redshift",
-        start_date=datetime(2018, 1, 1, 7)
+        start_date=datetime(2018, 1, 1)
     ),
     task_id="load_dimensions",
     dag=dag
@@ -115,24 +117,17 @@ run_quality_checks = DataQualityOperator(
     sql_stmt=SqlQueries.count_check,
     tables=SqlQueries.tables
 )
-
-# optional -------------------------------------------------------------
-# add it before the end operator
-
 # grant_access = """
 #                create group webappusers;
 #                create user webappuser1 password 'webAppuser1pass' in group webappusers;
 #                grant usage on schema project to group webappusers;
 #                """
-#
 # grant_access_to_users = PostgresOperator(
 #     task_id="grant_access",
 #     postgres_conn_id="redshift",
 #     sql=grant_access,
 #     dag=dag
 # )
-
-# ----------------------------------------------------------------------
 
 # dummy for node end
 end_operator = DummyOperator(task_id='Stop_execution', dag=dag)

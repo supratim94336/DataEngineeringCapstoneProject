@@ -35,7 +35,7 @@ Gather interesting insights like demographic population based on certain
  dimensions based upon some filter conditions.
  e.g.   
  - Compare immigration of different nationalities
- - Compare immigration based on visa type
+ - Compare number of airports by state
  - Different kinds of airport statistics
  - Aggregate flow of immigrants through different ports
 
@@ -63,7 +63,19 @@ Addressing other scenarios
 
 ### The database needed to be accessed by 100+ people:
 - People are granted usage on schema, so not everyone but people who 
-have access to the data can use it as necessary
+have access to the data can use it as necessary, below are the 
+necessary commands one you use in Redshift query editor, that's why it
+is purely optional to use it as a task in my pipeline:
+
+We can create a group of users, called webappusers, who will use the
+use the functionality of the schema but cannot take admin decisions and 
+we can add individual users with their name and init password.
+
+```bash
+create group webappusers;
+create user webappuser1 password 'webAppuser1pass' in group webappusers;
+grant usage on schema project to group webappusers;
+``` 
 
 
 Defending Decisions

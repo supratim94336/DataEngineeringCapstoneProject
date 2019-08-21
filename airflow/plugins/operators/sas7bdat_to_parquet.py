@@ -11,7 +11,7 @@ import os
 
 class SAS7ToParquet(BaseOperator):
 
-    ui_color = '#89DA59'
+    ui_color = '#87CEFA'
 
     @apply_defaults
     def __init__(self,
@@ -100,22 +100,20 @@ class SAS7ToParquet(BaseOperator):
         df_all = spark.createDataFrame(sc.emptyRDD(), schema)
 
         logging.info('Reading sas7bdat files from disc ... ')
-        onlyfiles = [join(self.input_path, f) for f in
-                     listdir(self.input_path) if
+        onlyfiles = [join(self.input_path, f) for f in listdir(self.input_path) if
                      isfile(join(self.input_path, f))]
 
         for f in onlyfiles:
             file_name, file_extension = os.path.splitext(f)
             if file_extension == '.' + 'sas7bdat':
                 df_temp = spark.read.format(
-                    'com.github.saurfang.sas.spark').load(f)\
-                    .select(columns)
+                    'com.github.saurfang.sas.spark').load(f).select(columns)
                 df_all = df_all.union(df_temp)
 
         logging.info('Writing parquet to disc ... ')
         if os.path.exists(self.output_path):
             shutil.rmtree(self.output_path)
-        if df_all.count() > 0:
-            df_temp = df_all.filter(df_all.i94addr.isNotNull()) \
-                            .filter(df_all.i94res.isNotNull())
-            df_temp.write.parquet(self.output_path)
+
+        df_temp = df_all.filter(df_all.i94addr.isNotNull())\
+                        .filter(df_all.i94res.isNotNull())
+        df_temp.write.parquet(self.output_path)
