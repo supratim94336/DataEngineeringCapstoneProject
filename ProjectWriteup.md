@@ -92,11 +92,17 @@ Defending Decisions
 ---
 
 ### The choice of tools, technologies:
-- Airflow to view, monitor and log flow of information
-- S3 Storage to store data on a large scale 
+- Airflow to view, monitor and log flow of information:  
+    Extremely useful tool to control end to end ETL processing
+- S3 Storage to store data on a large scale:  
+    Never complain about storage and most importantly when it stores big
+    data
 - Redshift to make advantage of columnar format and faster querying 
-strategies
-- Spark for distributed processing of heavy data
-- Pandas for cleaning data frames
+strategies:  
+    Query from anywhere and anytime
+- Spark for distributed processing of heavy data:  
+    Best in-memory faster processing
+- Pandas for cleaning data frames:  
+    absolutely neccessary
 
 

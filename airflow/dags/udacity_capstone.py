@@ -17,13 +17,13 @@ from airflow.operators.subdag_operator import SubDagOperator
 
 default_args = {
     'owner': 'udacity',
-    'start_date': datetime(2018, 1, 1, 7),
-    'end_date': datetime(2019, 12, 1, 7),
+    'start_date': datetime(2019, 8, 22, 7),
+    'end_date': datetime(2019, 12, 31, 7),
     'email_on_retry': False,
     'retries': 3,
     'catchup': False,
     'retry_delay': timedelta(minutes=5),
-    'depends_on_past': False,
+    'depends_on_past': True,
     'wait_for_downstream': True
 }
 
@@ -31,7 +31,7 @@ default_args = {
 dag = DAG('udacity_capstone',
           default_args=default_args,
           description='Data Engineering Capstone Project',
-          schedule_interval='@hourly'
+          schedule_interval='@daily'
           )
 
 # dummy for node 0
@@ -118,7 +118,7 @@ run_quality_checks = DataQualityOperator(
 
 
 def cleaning(**kwargs):
-    folder = Variable.get("temp_output")
+    folder = Variable.get("spark_path")
     for the_file in os.listdir(folder):
         file_path = os.path.join(folder, the_file)
         try:

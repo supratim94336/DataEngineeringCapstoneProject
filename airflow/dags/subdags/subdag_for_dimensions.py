@@ -5,6 +5,8 @@ from airflow.models import Variable
 from airflow.hooks.postgres_hook import PostgresHook
 from airflow.operators.python_operator import PythonOperator
 import logging
+import boto3
+from airflow.contrib.hooks.aws_hook import AwsHook
 
 
 def load_dimension_subdag(
@@ -140,6 +142,20 @@ def load_dimension_subdag(
             iam_role
         )
         redshift.run(formatted_sql)
+        aws_hook = AwsHook("aws_default")
+        credentials = aws_hook.get_credentials()
+        client = boto3.client('s3',
+                              aws_access_key_id=credentials.access_key,
+                              aws_secret_access_key=credentials.secret_key)
+        objects_to_delete = client.list_objects(
+            Bucket=Variable.get("s3_bucket"), Prefix="parquet")
+        delete_keys = {'Objects': []}
+        delete_keys['Objects'] = [{'Key': k} for k in
+                                  [obj['Key'] for obj in
+                                   objects_to_delete.get('Contents',
+                                                         [])]]
+        client.delete_objects(Bucket=Variable.get("s3_bucket"),
+                              Delete=delete_keys)
 
     copy_immigration = PythonOperator(
         task_id='copy_immigration',

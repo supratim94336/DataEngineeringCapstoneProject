@@ -28,6 +28,7 @@ and graphs from the data itself.
 ### Data Pipeline
 
 ___
+![alt text](img/marker.png)
 ![alt text](img/pipeline.png)
 ![alt_text](img/pipeline-tree.png)
 
@@ -195,7 +196,8 @@ admin
 
 4. Data Location for input files:  
     i. Put all your sas7bdat formatted files in temp_input directory 
-    (whenever you want to process/insert them into the db)  
+    (whenever you want to process/insert them into the db, when you are
+    done remove the .sas7bdat file/files and drop new files)  
     ii. Put SAS descriptor file in temp_input directory  
     iii. Put airport-codes_csv.csv file in temp_output directory  
     
@@ -244,6 +246,12 @@ FROM
 ORDER BY airports.count DESC
 ```
 
+#### Small airport locations
+```
+SELECT a.longitude_deg, a.latitude_deg 
+FROM project.airport_codes a 
+WHERE a.iso_country = 'US' AND a.type = 'small_airport'
+```
 ### Stats and Graphs
 
 ---
@@ -258,6 +266,9 @@ ORDER BY airports.count DESC
 
 #### Small airports from different states
 ![alt_text](img/state_airports.png)
+
+#### Small airports locations in different states
+![alt_text](img/graph.png)
 
 ### Links for Airflow
 
