@@ -1,11 +1,13 @@
 # generic
 from datetime import datetime, timedelta
 import os
-
+import shutil
+import logging
 # airflow
 from airflow import DAG
 from airflow.operators.dummy_operator import DummyOperator
 from airflow.operators.postgres_operator import PostgresOperator
+from airflow.operators.python_operator import PythonOperator
 from airflow.operators import (SASToCSVOperator, TransferToS3Operator, SAS7ToParquet, StageToRedshiftOperator, DataQualityOperator)
 from subdags.subdag_for_dimensions import load_dimension_subdag
 from airflow.models import Variable
@@ -113,6 +115,28 @@ run_quality_checks = DataQualityOperator(
     sql_stmt=SqlQueries.count_check,
     tables=SqlQueries.tables
 )
+
+
+def cleaning(**kwargs):
+    folder = Variable.get("temp_output")
+    for the_file in os.listdir(folder):
+        file_path = os.path.join(folder, the_file)
+        try:
+            if os.path.isfile(file_path):
+                os.unlink(file_path)
+            elif os.path.isdir(file_path):
+                shutil.rmtree(file_path)
+        except Exception as e:
+            logging.info(e)
+
+
+clean_temp_files = PythonOperator(
+        task_id='clean_temp_files',
+        python_callable=cleaning,
+        provide_context=True,
+        dag=dag
+    )
+
 # grant_access = """
 #                create group webappusers;
 #                create user webappuser1 password 'webAppuser1pass' in group webappusers;
@@ -131,4 +155,4 @@ end_operator = DummyOperator(task_id='Stop_execution', dag=dag)
 # order
 start_operator >> convert_sas_to_csv >> transfer_to_s3_csv >> task_create_schema
 start_operator >> sas7bdat_to_parquet >> transfer_to_s3_parquet >> task_create_schema
-task_create_schema >> task_drop_table >> task_create_table >> load_dimension_subdag_task >> run_quality_checks >> end_operator
+task_create_schema >> task_drop_table >> task_create_table >> load_dimension_subdag_task >> run_quality_checks >> clean_temp_files >> end_operator
