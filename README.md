@@ -147,7 +147,7 @@ If you haven't setup your AWS Redshift Cluster yet
 This data comes from the US National Tourism and Trade Office. 
 [This](https://travel.trade.gov/research/reports/i94/historical/2016.html) 
 is where the data comes from. There's a sample file so you can take a look 
-at the data in csv format before reading it all in. The report contains 
+at the data in csv format before sreading it all in. The report contains 
 international visitor arrival statistics by world regions and selected 
 countries (including top 20), type of visa, mode of transportation, 
 age groups, states visited (first intended address only), and the top 
@@ -170,7 +170,7 @@ This is a simple table of airport codes and corresponding cities. It comes from 
 3. You have to setup all the connections and variables in the Airflow
 admin  
     i. Setup aws connection with user credentials (access_key and 
-    secret_key with login and password)  
+    secret_key with login and password). Make sure the region is 'us-west-2'  
     ii. Setup Redshift connection with user, password, host, port, 
     schema, db  
     iii. Setup iam_role for your aws account  
@@ -178,7 +178,9 @@ admin
     manipulation path for parquet files), sas_file (sas7bdat descriptor 
     files)  
     v. Place all the csv inputs inside temp_output directory   
-    vi. Create a folder called 'spark_path' inside \airflow\dags\  
+    vi. Create a folder called 'spark_path' inside \airflow\dags\    
+    vii. Create variable called 's3_bucket' (make sure the bucket in 
+    AWS is in region 'us-west-2')
   
     Example:  
     
