@@ -7,14 +7,10 @@ from airflow import DAG
 from airflow.operators.dummy_operator import DummyOperator
 from airflow.operators.postgres_operator import PostgresOperator
 from airflow.operators import (SASToCSVOperator, TransferToS3Operator, SAS7ToParquet, StageToRedshiftOperator, DataQualityOperator)
-from airflow.operators.python_operator import PythonOperator
 from subdags.subdag_for_dimensions import load_dimension_subdag
 from airflow.models import Variable
 from helpers import SqlQueries
 from airflow.operators.subdag_operator import SubDagOperator
-# temp
-import pandas as pd
-import os
 
 
 default_args = {
