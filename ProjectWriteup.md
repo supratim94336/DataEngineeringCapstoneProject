@@ -37,7 +37,7 @@ Gather interesting insights like demographic population based on certain
  - Compare immigration of different nationalities
  - Compare number of airports by state
  - Different kinds of airport statistics
- - Aggregate flow of immigrants through different ports
+ - Aggregate flow of immigrants through different cities
 
 So I am using the airport codes, US immigration data of '94 and 
 dimensions such as visa type, mode of transport, nationality codes, US 

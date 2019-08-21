@@ -196,13 +196,41 @@ admin
 ---
 
 **Example Queries**
-- Get nationalities who were immigrating in decreasing order of people
-count
-SELECT top 10 b.country_name, COUNT(cicid)
+#### City from where immigrants arrived
+```
+SELECT TOP 10 b.port_city, b.port_state_or_country, COUNT(cicid) AS count
+FROM project.immigration a INNER JOIN project.i94ports b ON a.i94port=b.port_code
+GROUP BY b.port_city, b.port_state_or_country
+ORDER BY COUNT(cicid) DESC
+```
+
+#### Different kinds of airports
+```
+SELECT top 10 distinct type, count(*) AS count_type
+FROM project.airport_codes
+WHERE iso_country = 'US'
+GROUP BY type
+ORDER BY count_type DESC
+```
+
+#### Immigrants from different countries
+```
+SELECT top 10 SUBSTRING(b.country_name, 0, 15) as country_name, COUNT(cicid) as count
 FROM project.immigration a INNER JOIN project.i94res b ON a.i94res=b.country_code
 GROUP BY b.country_name
 ORDER BY COUNT(cicid) DESC
+```
 
+#### Small airports from different states
+```
+SELECT a.state_name AS State, airports.count AS Count_of_Airports
+FROM
+    (SELECT top 10 distinct substring(iso_region, 4, length(iso_region)) AS state, count(*)
+     FROM project.airport_codes
+     WHERE iso_country = 'US' AND type='small_airport'
+     GROUP BY iso_region) airports INNER JOIN project.i94addr a ON airports.state=a.state_code
+ORDER BY airports.count DESC
+```
 
 ### Stats and Graphs
 
