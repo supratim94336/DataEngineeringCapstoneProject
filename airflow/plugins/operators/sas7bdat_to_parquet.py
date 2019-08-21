@@ -100,14 +100,16 @@ class SAS7ToParquet(BaseOperator):
         df_all = spark.createDataFrame(sc.emptyRDD(), schema)
 
         logging.info('Reading sas7bdat files from disc ... ')
-        onlyfiles = [join(self.input_path, f) for f in listdir(self.input_path) if
+        onlyfiles = [join(self.input_path, f) for f in
+                     listdir(self.input_path) if
                      isfile(join(self.input_path, f))]
 
         for f in onlyfiles:
             file_name, file_extension = os.path.splitext(f)
             if file_extension == '.' + 'sas7bdat':
                 df_temp = spark.read.format(
-                    'com.github.saurfang.sas.spark').load(f).select(columns)
+                    'com.github.saurfang.sas.spark').load(f)\
+                                                    .select(columns)
                 df_all = df_all.union(df_temp)
 
         logging.info('Writing parquet to disc ... ')

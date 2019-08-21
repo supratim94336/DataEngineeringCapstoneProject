@@ -119,6 +119,18 @@ def load_dimension_subdag(
 
     def parquet_to_redshift(table, s3_bucket, s3_key, iam_role,
                             sql_stmt, redshift_conn_id, **kwargs):
+        """
+        This function reads parquet files and copies them to redshift
+        schema.db
+        :param table:
+        :param s3_bucket:
+        :param s3_key:
+        :param iam_role:
+        :param sql_stmt:
+        :param redshift_conn_id:
+        :param kwargs:
+        :return:
+        """
         redshift = PostgresHook(postgres_conn_id=redshift_conn_id)
         logging.info("Copying data from S3 to Redshift")
         s3_path = "s3://{}/{}".format(s3_bucket, s3_key)

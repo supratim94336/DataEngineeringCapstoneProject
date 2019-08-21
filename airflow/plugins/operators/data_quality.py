@@ -26,5 +26,5 @@ class DataQualityOperator(BaseOperator):
             try:
                 if redshift.run(self.sql_stmt.format(cur_table)) == 1:
                     self.log.info(f""" Quality test passed for {cur_table} """)
-            except:
+            except Exception:
                 raise ValueError(f""" Quality check for {cur_table} """)
