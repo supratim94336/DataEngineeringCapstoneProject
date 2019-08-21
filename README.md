@@ -193,10 +193,19 @@ admin
     | temp_input | /home/workspace/airflow/dags/temp_input/ |
     | temp_output | /home/workspace/airflow/dags/temp_output/ |
 
+4. Data Location for input files:  
+    i. Put all your sas7bdat formatted files in temp_input directory   
+    ii. Put SAS descriptor file in temp_input directory  
+    iii. Put airport-codes_csv.csv file in temp_output directory  
+    
+    
 ### Test it Yourself!
 
 ---
 
+Here are some example queries we test to see the uploaded results into 
+the Redshift schema 
+ 
 **Example Queries**
 #### City from where immigrants arrived
 ```
