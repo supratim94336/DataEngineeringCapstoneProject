@@ -194,7 +194,8 @@ admin
     | temp_output | /home/workspace/airflow/dags/temp_output/ |
 
 4. Data Location for input files:  
-    i. Put all your sas7bdat formatted files in temp_input directory   
+    i. Put all your sas7bdat formatted files in temp_input directory 
+    (whenever you want to process/insert them into the db)  
     ii. Put SAS descriptor file in temp_input directory  
     iii. Put airport-codes_csv.csv file in temp_output directory  
     

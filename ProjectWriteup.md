@@ -47,13 +47,15 @@ state code information
 Addressing other scenarios
 ---
 
-### Data Increased by 100%:
- - I am using columnar format of redshift so querying will not be slower
+### Data Increased by 100x:
+ - I am using columnar format of redshift, so querying will not be slower
  - Incremental update is provided so that every time full amount is not 
- inserted
+ inserted everytime. Whenever one wants to insert data into the database
+ for immigration can just drop their sas7bdat files into the temp_input
+ folder 
  - Spark is used where heavy data is read and parsed, so distributed 
  processing is also involved
- - Spark memory and configuration is editable to handle more pressure
+ - Spark memory and processors is configurable to handle more pressure
  - S3 storage is used which is scalable and easily accessible with other
  AWS infrastructure
  
